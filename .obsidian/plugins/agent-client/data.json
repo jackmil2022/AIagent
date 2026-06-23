@@ -1,0 +1,94 @@
+{
+  "claude": {
+    "id": "claude-code-acp",
+    "displayName": "Claude Code",
+    "apiKey": "",
+    "command": "claude-agent-acp",
+    "args": [],
+    "env": []
+  },
+  "codex": {
+    "id": "codex-acp",
+    "displayName": "Codex",
+    "apiKey": "",
+    "command": "C:\\Program Files\\nodejs\\node.exe",
+    "args": [
+      "C:\\Users\\Administrator\\AppData\\Roaming\\npm\\node_modules\\@agentclientprotocol\\codex-acp\\dist\\index.js"
+    ],
+    "env": [
+      {
+        "key": "CODEX_PATH",
+        "value": "C:\\Users\\Administrator\\AppData\\Local\\OpenAI\\Codex\\bin\\8e55c2dd143b6354\\codex.exe"
+      }
+    ]
+  },
+  "gemini": {
+    "id": "gemini-cli",
+    "displayName": "Gemini CLI",
+    "apiKey": "",
+    "command": "gemini",
+    "args": [
+      "--experimental-acp"
+    ],
+    "env": []
+  },
+  "customAgents": [],
+  "defaultAgentId": "codex-acp",
+  "autoAllowPermissions": false,
+  "autoMentionActiveNote": true,
+  "enableSystemNotifications": true,
+  "debugMode": false,
+  "nodePath": "",
+  "exportSettings": {
+    "defaultFolder": "Agent Client",
+    "filenameTemplate": "agent_client_{date}_{time}",
+    "autoExportOnNewChat": false,
+    "autoExportOnCloseChat": false,
+    "openFileAfterExport": true,
+    "includeImages": true,
+    "imageLocation": "obsidian",
+    "imageCustomFolder": "Agent Client",
+    "frontmatterTag": "agent-client"
+  },
+  "windowsWslMode": false,
+  "sendMessageShortcut": "enter",
+  "chatViewLocation": "right-tab",
+  "displaySettings": {
+    "autoCollapseDiffs": false,
+    "diffCollapseThreshold": 10,
+    "maxNoteLength": 10000,
+    "maxSelectionLength": 10000,
+    "showEmojis": true,
+    "fontSize": null
+  },
+  "savedSessions": [
+    {
+      "sessionId": "019ef518-de68-7e61-a1fe-27db11234f01",
+      "agentId": "codex-acp",
+      "cwd": "E:\\code\\AIagent",
+      "title": "https://datawhalechina.github.io/hello-agents/#/\n帮...",
+      "createdAt": "2026-06-23T15:34:55.835Z",
+      "updatedAt": "2026-06-23T15:34:55.835Z"
+    },
+    {
+      "sessionId": "019ef50d-e1ab-7350-946f-f4b3ccd36349",
+      "agentId": "codex-acp",
+      "cwd": "E:\\code\\AIagent",
+      "title": "你好",
+      "createdAt": "2026-06-23T15:16:48.126Z",
+      "updatedAt": "2026-06-23T15:16:48.127Z"
+    }
+  ],
+  "lastUsedModels": {},
+  "lastUsedModes": {
+    "codex-acp": "agent-full-access"
+  },
+  "enableFloatingChat": false,
+  "floatingButtonImage": "",
+  "floatingWindowSize": {
+    "width": 400,
+    "height": 500
+  },
+  "floatingWindowPosition": null,
+  "floatingButtonPosition": null
+}
