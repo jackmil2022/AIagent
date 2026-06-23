@@ -11,14 +11,12 @@
             "id": "6e09120c0c90d97b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Transformers快速入门/04-第三章：注意力机制.md",
-                "mode": "source",
-                "source": false
+                "file": "Transformers快速入门/Drawing 2026-06-23 23.48.46.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "04-第三章：注意力机制"
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2026-06-23 23.48.46.excalidraw"
             }
           }
         ]
@@ -169,14 +167,24 @@
             "state": {
               "type": "agent-client-chat-view",
               "state": {
-                "initialAgentId": "codex-acp"
+                "initialAgentId": "claude-code-acp"
               },
               "icon": "bot-message-square",
               "title": "Agent client"
             }
+          },
+          {
+            "id": "b527c8e5f7966fe5",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -192,11 +200,17 @@
       "command-palette:打开命令面板": false,
       "bases:新建数据库": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "agent-client:Open agent client": false
+      "agent-client:Open agent client": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "57b9c8a5f69404fa",
+  "active": "6e09120c0c90d97b",
   "lastOpenFiles": [
+    "Transformers快速入门/07-第六章：必要的 Pytorch 知识.md",
+    "Transformers快速入门/Drawing 2026-06-23 23.48.46.excalidraw.md",
+    "Transformers快速入门/04-第三章：注意力机制.md",
+    "Excalidraw",
+    "未命名.base",
     "Transformers快速入门/03-第二章：Transformer 模型.md",
     "Transformers快速入门/02-第一章：自然语言处理.md",
     "Transformers快速入门/01-Transformers快速入门.md",
@@ -212,10 +226,8 @@
     "Transformers快速入门/10-第九章：序列标注任务.md",
     "Transformers快速入门/09-第八章：快速分词器.md",
     "Transformers快速入门/08-第七章：微调预训练模型.md",
-    "Transformers快速入门/07-第六章：必要的 Pytorch 知识.md",
     "Transformers快速入门/06-第五章：模型与分词器.md",
     "Transformers快速入门/05-第四章：开箱即用的 pipelines.md",
-    "Transformers快速入门/04-第三章：注意力机制.md",
     "Transformers快速入门",
     "tools/import_transformers_run.py",
     "tools"
