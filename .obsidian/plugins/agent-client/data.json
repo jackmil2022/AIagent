@@ -80,6 +80,14 @@
   },
   "savedSessions": [
     {
+      "sessionId": "d495b430-6259-4ea5-9ec3-4ec37dbe9ad2",
+      "agentId": "claude-code-acp",
+      "cwd": "/Users/yin/PycharmProjects/AIagent",
+      "title": "/goal 帮我从全网搜索 关于投流 agent，优化师 的教程，和知识，放到 投流agent下面，...",
+      "createdAt": "2026-06-24T06:46:21.625Z",
+      "updatedAt": "2026-06-24T06:46:21.629Z"
+    },
+    {
       "sessionId": "b22f9a8a-4c0a-42e0-8dc2-3ff5318e2714",
       "agentId": "claude-code-acp",
       "cwd": "/Users/yin/PycharmProjects/AIagent",

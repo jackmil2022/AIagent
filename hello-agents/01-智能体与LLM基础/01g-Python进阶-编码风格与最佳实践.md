@@ -485,12 +485,12 @@ select = ["E", "F", "W", "I", "N", "UP"]
 
 ### 6.1 linter / formatter
 
-| 工具 | 用途 | 命令 |
-|------|------|------|
-| `ruff` | Lint + Format（推荐，极快） | `ruff check .` / `ruff format .` |
-| `black` | 代码格式化 | `black .` |
-| `flake8` | Lint | `flake8 .` |
-| `mypy` | 类型检查 | `mypy .` |
+| 工具       | 用途                   | 命令                               |
+| -------- | -------------------- | -------------------------------- |
+| `ruff`   | Lint + Format（推荐，极快） | `ruff check .` / `ruff format .` |
+| `black`  | 代码格式化                | `black .`                        |
+| `flake8` | Lint                 | `flake8 .`                       |
+| `mypy`   | 类型检查                 | `mypy .`                         |
 
 ### 6.2 推荐配置
 
