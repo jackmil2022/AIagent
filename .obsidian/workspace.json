@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e4789197b5915678",
+        "id": "d890259134023e7c",
         "type": "tabs",
         "children": [
           {
-            "id": "6e09120c0c90d97b",
+            "id": "1e23a5858b86859d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Transformers快速入门/09-第八章：快速分词器.md",
+                "file": "Transformers快速入门/07-第六章：必要的 Pytorch 知识.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "09-第八章：快速分词器"
+              "title": "07-第六章：必要的 Pytorch 知识"
             }
           }
         ]
@@ -190,7 +190,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 674.5
+    "width": 449.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -206,32 +206,43 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6e09120c0c90d97b",
+  "active": "b527c8e5f7966fe5",
   "lastOpenFiles": [
-    "Transformers快速入门/10-第九章：序列标注任务.md",
-    "Transformers快速入门/11-第十章：翻译任务.md",
-    "Transformers快速入门/12-第十一章：文本摘要任务.md",
-    "Transformers快速入门/Drawing 2026-06-23 23.48.46.excalidraw.md",
-    "Transformers快速入门/07-第六章：必要的 Pytorch 知识.md",
-    "Transformers快速入门/04-第三章：注意力机制.md",
-    "Excalidraw",
-    "未命名.base",
-    "Transformers快速入门/03-第二章：Transformer 模型.md",
-    "Transformers快速入门/02-第一章：自然语言处理.md",
-    "Transformers快速入门/01-Transformers快速入门.md",
-    "Transformers快速入门/00-索引.md",
-    "Transformers快速入门/18-附录A：信息论基本概念.md",
-    "Transformers快速入门/17-第十六章：使用大语言模型.md",
-    "Transformers快速入门/16-第十五章：预训练大语言模型.md",
-    "Transformers快速入门/15-第十四章：大语言模型技术简介.md",
-    "Transformers快速入门/14-第十三章：Prompting 情感分析.md",
-    "Transformers快速入门/13-第十二章：抽取式问答.md",
-    "Transformers快速入门/09-第八章：快速分词器.md",
-    "Transformers快速入门/08-第七章：微调预训练模型.md",
-    "Transformers快速入门/06-第五章：模型与分词器.md",
-    "Transformers快速入门/05-第四章：开箱即用的 pipelines.md",
-    "Transformers快速入门",
-    "tools/import_transformers_run.py",
-    "tools"
+    "CV-深度学习笔记/00-目录索引.md",
+    "hello-agents/03-高级知识扩展/11-Agentic-RL.md",
+    "hello-agents/02-构建LLM智能体/12a-LangChain-核心概念.md",
+    "hello-agents/02-构建LLM智能体/11a-API调用-OpenAI接口.md",
+    "hello-agents/01-智能体与LLM基础/00-基础知识索引.md",
+    "CV-深度学习笔记/01-PyTorch基础-土堆/搭建小实战和Sequential使用.md",
+    "CV-深度学习笔记/01-PyTorch基础-土堆/查看开源项目.md",
+    "02-深度学习理论-李沐/Kaggle房价预测.md",
+    "01-PyTorch基础-土堆/Tensorboard使用.md",
+    "01-PyTorch基础-土堆/Pytorch安装.md",
+    "01-PyTorch基础-土堆/最大池化层.md",
+    "01-PyTorch基础-土堆/完整模型训练套路.md",
+    "01-PyTorch基础-土堆/卷积层.md",
+    "CV-深度学习笔记/02-深度学习理论-李沐/池化层.md",
+    "CV-深度学习笔记/02-深度学习理论-李沐/残差神经网络ResNet.md",
+    "CV-深度学习笔记/02-深度学习理论-李沐/编码器解码器架构.md",
+    "CV-深度学习笔记/04-大模型与Agent/向量数据库.md",
+    "CV-深度学习笔记/04-大模型与Agent/API基本参数.md",
+    "CV-深度学习笔记/04-大模型与Agent/PythonAPI环境安装.md",
+    "CV-深度学习笔记/03-深度学习课程-吴恩达/课程1_第2周_测验题.md",
+    "CV-深度学习笔记/03-深度学习课程-吴恩达/课程1_第1周_作业题_numpy构建基本函数.md",
+    "CV-深度学习笔记/03-深度学习课程-吴恩达/课程1_第1周_深度学习概述.md",
+    "CV-深度学习笔记/03-深度学习课程-吴恩达/课程1_第1周_测验题.md",
+    "CV-深度学习笔记/01-PyTorch基础-土堆/Transforms使用.md",
+    "CV-深度学习笔记/01-PyTorch基础-土堆/损失函数与反向传播.md",
+    "CV-深度学习笔记/01-PyTorch基础-土堆/利用GPU训练.md",
+    "convert_notebooks.py",
+    "02-深度学习理论-李沐",
+    "01-PyTorch基础-土堆",
+    "CV-深度学习笔记/04-大模型与Agent/向量数据库.ipynb",
+    "CV-深度学习笔记/04-大模型与Agent/代码分析与展望.ipynb",
+    "CV-深度学习笔记/04-大模型与Agent/手写python大模型.ipynb",
+    "CV-深度学习笔记/04-大模型与Agent/PythonAPI环境安装.ipynb",
+    "CV-深度学习笔记/04-大模型与Agent/多轮对话.ipynb",
+    "CV-深度学习笔记/04-大模型与Agent/核心概念与流程.ipynb",
+    "CV-深度学习笔记/04-大模型与Agent/使用LangChain构建RAG.ipynb"
   ]
 }
