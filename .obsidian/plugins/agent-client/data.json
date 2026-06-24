@@ -80,6 +80,14 @@
   },
   "savedSessions": [
     {
+      "sessionId": "b22f9a8a-4c0a-42e0-8dc2-3ff5318e2714",
+      "agentId": "claude-code-acp",
+      "cwd": "/Users/yin/PycharmProjects/AIagent",
+      "title": "帮我完善一下，python 高级的知识，包含 高级玩法，常用的 框架，设计模式，编码风格等",
+      "createdAt": "2026-06-24T03:36:58.177Z",
+      "updatedAt": "2026-06-24T03:36:58.178Z"
+    },
+    {
       "sessionId": "552ffdf7-e5ca-4795-8b1e-e9be9f89a6d6",
       "agentId": "claude-code-acp",
       "cwd": "/Users/yin/PycharmProjects/AIagent",

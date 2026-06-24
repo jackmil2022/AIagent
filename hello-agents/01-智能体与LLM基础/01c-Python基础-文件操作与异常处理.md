@@ -195,21 +195,21 @@ class Config:
     def __init__(self, filename="config.json"):
         self.filename = filename
         self.data = self.load()
-    
+
     def load(self):
         try:
             with open(self.filename, "r") as file:
                 return json.load(file)
         except FileNotFoundError:
             return {}
-    
+
     def save(self):
         with open(self.filename, "w") as file:
             json.dump(self.data, file, ensure_ascii=False, indent=2)
-    
+
     def get(self, key, default=None):
         return self.data.get(key, default)
-    
+
     def set(self, key, value):
         self.data[key] = value
         self.save()
@@ -326,20 +326,20 @@ from datetime import datetime
 class Logger:
     def __init__(self, filename="app.log"):
         self.filename = filename
-    
+
     def log(self, level, message):
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         log_entry = f"[{timestamp}] [{level}] {message}\n"
-        
+
         try:
             with open(self.filename, "a") as file:
                 file.write(log_entry)
         except Exception as e:
             print(f"日志写入失败：{e}")
-    
+
     def info(self, message):
         self.log("INFO", message)
-    
+
     def error(self, message):
         self.log("ERROR", message)
 
@@ -359,7 +359,7 @@ from datetime import datetime
 class BackupManager:
     def __init__(self, data_file="data.json"):
         self.data_file = data_file
-    
+
     def backup(self):
         """创建备份"""
         try:
@@ -371,7 +371,7 @@ class BackupManager:
         except FileNotFoundError:
             print("原文件不存在")
             return None
-    
+
     def restore(self, backup_file):
         """恢复备份"""
         try:
@@ -403,8 +403,10 @@ manager.backup()
 
 ## 🎯 下一步
 
-- **02a - 数学基础：线性代数** - AI的数学基础
-- **03a - 机器学习：基本概念** - ML入门
+- [[01d-Python进阶-文件操作高级技巧]] - pathlib、上下文管理器、异步IO
+- [[01e-Python进阶-常用框架与库]] - pandas、FastAPI、pytest 等
+- [[01f-Python进阶-设计模式]] - 单例、工厂、观察者等模式
+- [[01g-Python进阶-编码风格与最佳实践]] - PEP 8、类型注解、Pythonic 写法
 
 ---
 

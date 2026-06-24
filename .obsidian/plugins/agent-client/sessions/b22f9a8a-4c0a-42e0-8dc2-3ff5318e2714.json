@@ -1,0 +1,344 @@
+{
+  "version": 1,
+  "sessionId": "b22f9a8a-4c0a-42e0-8dc2-3ff5318e2714",
+  "agentId": "claude-code-acp",
+  "messages": [
+    {
+      "id": "ae003986-cf36-4c86-8d72-3d362f6dbff6",
+      "role": "user",
+      "content": [
+        {
+          "type": "text_with_context",
+          "text": "帮我完善一下，python 高级的知识，包含 高级玩法，常用的 框架，设计模式，编码风格等",
+          "autoMentionContext": {
+            "noteName": "01c-Python基础-文件操作与异常处理",
+            "notePath": "hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md"
+          }
+        }
+      ],
+      "timestamp": "2026-06-24T03:35:39.710Z"
+    },
+    {
+      "id": "12fef598-cc69-4681-a894-2687541eca3b",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "agent_thought",
+          "text": "The user wants me to enhance a Python basics note about file operations and exception handling, adding advanced Python knowledge including advanced techniques, common frameworks, design patterns, and coding style guidelines.\n\nLet me first read the current note to understand its structure and content."
+        }
+      ],
+      "timestamp": "2026-06-24T03:35:40.751Z"
+    },
+    {
+      "id": "3ac34914-3280-4ebc-b7b9-9aa655caf504",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "tool_call",
+          "toolCallId": "call_608dfbe135c44c658300dd9b",
+          "title": "Read hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md",
+          "status": "completed",
+          "kind": "read",
+          "content": [],
+          "locations": [
+            {
+              "line": 1,
+              "path": "/Users/yin/PycharmProjects/AIagent/hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md"
+            }
+          ],
+          "rawInput": {
+            "file_path": "/Users/yin/PycharmProjects/AIagent/hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md"
+          }
+        },
+        {
+          "type": "agent_thought",
+          "text": "The user wants me to enhance this Python basics note (about file operations and exception handling) with advanced Python knowledge. Let me read the full content first, then add sections on:\n\n1. Advanced file operations\n2. Common frameworks\n3. Design patterns\n4. Coding style guidelines\n\nLet me read the rest of the file to see what's there."
+        }
+      ],
+      "timestamp": "2026-06-24T03:35:41.916Z"
+    },
+    {
+      "id": "aba8a607-60aa-4b7d-8641-c4024507519c",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "tool_call",
+          "toolCallId": "call_19ea2b97a2494676b893c858",
+          "title": "Read hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md (from line 100)",
+          "status": "completed",
+          "kind": "read",
+          "content": [],
+          "locations": [
+            {
+              "line": 100,
+              "path": "/Users/yin/PycharmProjects/AIagent/hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md"
+            }
+          ],
+          "rawInput": {
+            "file_path": "/Users/yin/PycharmProjects/AIagent/hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md",
+            "offset": 100
+          }
+        },
+        {
+          "type": "agent_thought",
+          "text": "Now I have a complete understanding of the current note. It covers basic file operations and exception handling. The user wants me to add advanced Python knowledge including:\n1. Advanced file operations (高级玩法)\n2. Common frameworks (常用的框架)\n3. Design patterns (设计模式)\n4. Coding style (编码风格)\n\nLet me add these sections to the note, placing them after the basic content but before the summary section."
+        }
+      ],
+      "timestamp": "2026-06-24T03:35:44.400Z"
+    },
+    {
+      "id": "4759cf36-1bb2-4a03-8b6c-d71fbdb2da32",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "tool_call",
+          "toolCallId": "call_cacaaa29b8804636a322fbc7",
+          "title": "Edit hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md",
+          "status": "completed",
+          "kind": "edit",
+          "content": [
+            {
+              "type": "diff",
+              "path": "/Users/yin/PycharmProjects/AIagent/hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md",
+              "newText": "\n---\n\n## 🚀 8. 文件操作进阶\n\n### 8.1 pathlib — 面向对象的路径操作\n\n```python\nfrom pathlib import Path\n\n# 创建路径对象\ndata_dir = Path(\"data\")\nfile_path = data_dir / \"users.json\"  # 用 / 拼接路径\n\n# 常用方法\nfile_path.exists()          # 是否存在\nfile_path.is_file()         # 是否是文件\nfile_path.is_dir()          # 是否是目录\nfile_path.name              # 文件名：users.json\nfile_path.stem              # 不带后缀：users\nfile_path.suffix            # 后缀：.json\nfile_path.parent            # 父目录\n\n# 创建目录\ndata_dir.mkdir(parents=True, exist_ok=True)  # 递归创建，已存在不报错\n\n# 遍历目录\nfor f in Path(\".\").glob(\"*.py\"):        # 当前目录所有 .py\n    print(f)\n\nfor f in Path(\".\").rglob(\"*.py\"):       # 递归所有子目录\n    print(f)\n\n# 读写文件（Python 3.6+）\ncontent = file_path.read_text(encoding=\"utf-8\")\nfile_path.write_text(\"hello\", encoding=\"utf-8\")\n\n# 批量操作示例\ndef batch_rename(directory, old_ext, new_ext):\n    \"\"\"批量修改文件后缀\"\"\"\n    count = 0\n    for f in Path(directory).glob(f\"*{old_ext}\"):\n        new_name = f.with_suffix(new_ext)\n        f.rename(new_name)\n        count += 1\n    return count\n```\n\n### 8.2 上下文管理器 — 自定义 with 语句\n\n```python\n# 方式1：类实现\nclass DatabaseConnection:\n    def __init__(self, db_name):\n        self.db_name = db_name\n        self.conn = None\n\n    def __enter__(self):\n        print(f\"连接数据库: {self.db_name}\")\n        self.conn = True  # 模拟连接\n        return self.conn\n\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        print(f\"关闭数据库: {self.db_name}\")\n        self.conn = None\n        return False  # 不抑制异常\n\n# 使用\nwith DatabaseConnection(\"mydb\") as conn:\n    print(\"执行查询...\")\n# 输出：连接数据库 → 执行查询... → 关闭数据库\n\n# 方式2：contextlib 装饰器（更简洁）\nfrom contextlib import contextmanager\n\n@contextmanager\ndef timer(label=\"\"):\n    import time\n    start = time.time()\n    yield  # 这里是 with 块的代码执行点\n    elapsed = time.time() - start\n    print(f\"{label} 耗时: {elapsed:.3f}s\")\n\nwith timer(\"数据处理\"):\n    import time\n    time.sleep(1)\n# 输出：数据处理 耗时: 1.001s\n\n# 方式3：抑制异常\nfrom contextlib import suppress\nimport os\n\nwith suppress(FileNotFoundError):\n    os.remove(\"maybe_exists.txt\")  # 文件不存在也不报错\n```\n\n### 8.3 异步文件操作（asyncio）\n\n```python\nimport asyncio\nimport aiofiles  # 需要安装: pip install aiofiles\n\nasync def read_large_file(filepath):\n    \"\"\"异步读取大文件\"\"\"\n    async with aiofiles.open(filepath, 'r') as f:\n        content = await f.read()\n    return content\n\nasync def write_file_async(filepath, data):\n    \"\"\"异步写入文件\"\"\"\n    async with aiofiles.open(filepath, 'w') as f:\n        await f.write(data)\n\n# 使用\nasync def main():\n    content = await read_large_file(\"data.txt\")\n    print(content[:100])\n\nasyncio.run(main())\n```\n\n### 8.4 CSV 与 Excel 处理\n\n```python\nimport csv\nimport json\nfrom io import StringIO\n\n# 高级 CSV 处理\ndef csv_to_json(filepath):\n    \"\"\"CSV 转 JSON\"\"\"\n    with open(filepath, 'r') as f:\n        reader = csv.DictReader(f)\n        return list(reader)\n\n# 读取 Excel（需要安装: pip install openpyxl）\nfrom openpyxl import Workbook, load_workbook\n\n# 写入 Excel\nwb = Workbook()\nws = wb.active\nws.title = \"用户数据\"\nws.append([\"姓名\", \"年龄\", \"邮箱\"])\nws.append([\"张三\", 25, \"zhangsan@example.com\"])\nwb.save(\"users.xlsx\")\n\n# 读取 Excel\nwb = load_workbook(\"users.xlsx\")\nws = wb.active\nfor row in ws.iter_rows(values_only=True):\n    print(row)\n```\n\n### 8.5 临时文件与内存文件\n\n```python\nimport tempfile\nimport io\n\n# 临时文件\nwith tempfile.NamedTemporaryFile(mode='w', suffix='.txt', delete=False) as f:\n    f.write(\"临时数据\")\n    temp_name = f.name\nprint(f\"临时文件: {temp_name}\")\n\n# 临时目录\nwith tempfile.TemporaryDirectory() as tmpdir:\n    print(f\"临时目录: {tmpdir}\")\n    # 在此范围内使用 tmpdir\n# 目录自动删除\n\n# 内存文件（StringIO / BytesIO）\ntext_buffer = io.StringIO()\ntext_buffer.write(\"在内存中写入\\n\")\ntext_buffer.seek(0)\nprint(text_buffer.read())\n\nbinary_buffer = io.BytesIO()\nbinary_buffer.write(b\"\\x89PNG\\r\\n\")\nbinary_buffer.seek(0)\n```\n\n---\n\n## 🏗️ 9. 常用框架与库\n\n### 9.1 数据处理\n\n| 框架 | 用途 | 安装 |\n|------|------|------|\n| `pandas` | 数据分析、表格处理 | `pip install pandas` |\n| `numpy` | 数值计算、矩阵运算 | `pip install numpy` |\n| `polars` | 高性能 DataFrame（比 pandas 快 10-100x） | `pip install polars` |\n\n```python\nimport pandas as pd\n\n# 读取 CSV\ndf = pd.read_csv(\"data.csv\")\n\n# 基本操作\ndf.head()           # 前5行\ndf.info()           # 数据类型信息\ndf.describe()       # 统计摘要\ndf[\"age\"].mean()    # 平均年龄\ndf[df[\"age\"] > 25]  # 筛选\ndf.groupby(\"city\").count()  # 分组统计\n\n# 保存\ndf.to_csv(\"output.csv\", index=False)\ndf.to_excel(\"output.xlsx\", index=False)\n```\n\n### 9.2 Web 开发\n\n| 框架 | 特点 | 适用场景 |\n|------|------|----------|\n| `FastAPI` | 异步、高性能、自动文档 | API 服务、微服务 |\n| `Django` | 全功能、ORM、Admin | 大型 Web 应用 |\n| `Flask` | 轻量、灵活 | 小型应用、原型 |\n\n```python\n# FastAPI 示例（推荐用于 AI Agent）\nfrom fastapi import FastAPI\nfrom pydantic import BaseModel\n\napp = FastAPI()\n\nclass Message(BaseModel):\n    role: str\n    content: str\n\n@app.get(\"/\")\ndef root():\n    return {\"message\": \"Hello, Agent!\"}\n\n@app.post(\"/chat\")\ndef chat(msg: Message):\n    return {\"reply\": f\"你说: {msg.content}\"}\n\n# 启动: uvicorn main:app --reload\n# 自动文档: http://localhost:8000/docs\n```\n\n### 9.3 测试框架\n\n| 框架 | 用途 | 安装 |\n|------|------|------|\n| `pytest` | 单元测试（推荐） | `pip install pytest` |\n| `pytest-asyncio` | 异步测试 | `pip install pytest-asyncio` |\n| `coverage` | 代码覆盖率 | `pip install coverage` |\n\n```python\n# test_example.py\nimport pytest\n\ndef add(a, b):\n    return a + b\n\ndef test_add_positive():\n    assert add(1, 2) == 3\n\ndef test_add_negative():\n    assert add(-1, -1) == -2\n\ndef test_add_zero():\n    assert add(0, 0) == 0\n\n# 测试异常\ndef test_divide_by_zero():\n    with pytest.raises(ZeroDivisionError):\n        1 / 0\n\n# 参数化测试\n@pytest.mark.parametrize(\"a,b,expected\", [\n    (1, 2, 3),\n    (-1, 1, 0),\n    (0, 0, 0),\n])\ndef test_add_parametrized(a, b, expected):\n    assert add(a, b) == expected\n```\n\n### 9.4 异步与并发\n\n```python\nimport asyncio\nimport aiohttp\nfrom concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor\n\n# asyncio — 协程并发\nasync def fetch_url(url):\n    async with aiohttp.ClientSession() as session:\n        async with session.get(url) as resp:\n            return await resp.text()\n\nasync def fetch_all(urls):\n    tasks = [fetch_url(url) for url in urls]\n    return await asyncio.gather(*tasks)\n\n# ThreadPoolExecutor — I/O 密集型\nimport time\n\ndef slow_io_task(n):\n    time.sleep(1)  # 模拟 I/O\n    return n * 2\n\nwith ThreadPoolExecutor(max_workers=5) as pool:\n    results = list(pool.map(slow_io_task, range(10)))\n    # 10个任务并行，总耗时约 2 秒\n\n# ProcessPoolExecutor — CPU 密集型\ndef heavy_compute(n):\n    return sum(i * i for i in range(n))\n\nwith ProcessPoolExecutor(max_workers=4) as pool:\n    results = list(pool.map(heavy_compute, [10**6] * 4))\n    # 4个进程并行计算\n```\n\n### 9.5 常用工具库速查\n\n| 库 | 用途 | 一句话 |\n|------|------|------|\n| `pydantic` | 数据验证 | 类型注解自动校验 |\n| `rich` | 终端美化 | 彩色输出、进度条 |\n| `loguru` | 日志 | 替代 logging，更简洁 |\n| `click` / `typer` | CLI 工具 | 快速构建命令行 |\n| `httpx` | HTTP 客户端 | 支持同步和异步 |\n| `tenacity` | 重试机制 | 装饰器实现自动重试 |\n| `pyyaml` / `toml` | 配置文件 | YAML/TOML 解析 |\n\n```python\n# loguru 示例（比 logging 更简洁）\nfrom loguru import logger\n\nlogger.add(\"app.log\", rotation=\"10 MB\", retention=\"7 days\")\nlogger.info(\"应用启动\")\nlogger.error(\"出错了: {err}\", err=\"文件不存在\")\n\n# pydantic 数据验证\nfrom pydantic import BaseModel, Field\n\nclass User(BaseModel):\n    name: str = Field(..., min_length=1, max_length=50)\n    age: int = Field(..., ge=0, le=150)\n    email: str\n\nuser = User(name=\"张三\", age=25, email=\"test@example.com\")  # ✅\n# user = User(name=\"\", age=-1, email=\"bad\")  # ❌ ValidationError\n```\n\n---\n\n## 🎨 10. 设计模式\n\n### 10.1 单例模式\n\n```python\n# 方式1：__new__ 实现\nclass Singleton:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance\n\n# 方式2：装饰器实现\ndef singleton(cls):\n    instances = {}\n    def get_instance(*args, **kwargs):\n        if cls not in instances:\n            instances[cls] = cls(*args, **kwargs)\n        return instances[cls]\n    return get_instance\n\n@singleton\nclass Database:\n    def __init__(self):\n        self.connection = \"连接中...\"\n\n# 方式3：模块级单例（最简洁）\n# config.py\nclass _Config:\n    def __init__(self):\n        self.debug = False\n        self.db_url = \"sqlite:///app.db\"\n\nconfig = _Config()  # 导入即单例\n```\n\n### 10.2 工厂模式\n\n```python\nfrom abc import ABC, abstractmethod\n\nclass Storage(ABC):\n    @abstractmethod\n    def save(self, data):\n        pass\n\n    @abstractmethod\n    def load(self, key):\n        pass\n\nclass FileStorage(Storage):\n    def save(self, data):\n        print(f\"保存到文件: {data}\")\n\n    def load(self, key):\n        print(f\"从文件加载: {key}\")\n        return {}\n\nclass RedisStorage(Storage):\n    def save(self, data):\n        print(f\"保存到 Redis: {data}\")\n\n    def load(self, key):\n        print(f\"从 Redis 加载: {key}\")\n        return {}\n\nclass StorageFactory:\n    _storages = {\n        \"file\": FileStorage,\n        \"redis\": RedisStorage,\n    }\n\n    @classmethod\n    def create(cls, storage_type: str) -> Storage:\n        if storage_type not in cls._storages:\n            raise ValueError(f\"未知存储类型: {storage_type}\")\n        return cls._storages[storage_type]()\n\n    @classmethod\n    def register(cls, name: str, storage_class):\n        cls._storages[name] = storage_class\n\n# 使用\nstorage = StorageFactory.create(\"file\")\nstorage.save({\"key\": \"value\"})\n```\n\n### 10.3 观察者模式（事件系统）\n\n```python\nfrom typing import Callable, Dict, List\n\nclass EventEmitter:\n    def __init__(self):\n        self._listeners: Dict[str, List[Callable]] = {}\n\n    def on(self, event: str, callback: Callable):\n        if event not in self._listeners:\n            self._listeners[event] = []\n        self._listeners[event].append(callback)\n\n    def emit(self, event: str, *args, **kwargs):\n        for callback in self._listeners.get(event, []):\n            callback(*args, **kwargs)\n\n    def off(self, event: str, callback: Callable):\n        if event in self._listeners:\n            self._listeners[event].remove(callback)\n\n# 使用\nemitter = EventEmitter()\n\ndef on_user_login(user):\n    print(f\"记录日志: {user} 登录了\")\n\ndef send_welcome(user):\n    print(f\"发送欢迎邮件给: {user}\")\n\nemitter.on(\"login\", on_user_login)\nemitter.on(\"login\", send_welcome)\nemitter.emit(\"login\", \"张三\")\n# 输出: 记录日志: 张三 登录了 → 发送欢迎邮件给: 张三\n```\n\n### 10.4 策略模式\n\n```python\nfrom typing import List\n\ndef sort_strategy_bubble(arr: List) -> List:\n    \"\"\"冒泡排序\"\"\"\n    a = arr.copy()\n    for i in range(len(a)):\n        for j in range(len(a) - 1 - i):\n            if a[j] > a[j + 1]:\n                a[j], a[j + 1] = a[j + 1], a[j]\n    return a\n\ndef sort_strategy_builtin(arr: List) -> List:\n    \"\"\"内置排序\"\"\"\n    return sorted(arr)\n\nclass Sorter:\n    def __init__(self, strategy=None):\n        self._strategy = strategy or sort_strategy_builtin\n\n    @property\n    def strategy(self):\n        return self._strategy\n\n    @strategy.setter\n    def strategy(self, strategy):\n        self._strategy = strategy\n\n    def sort(self, arr: List) -> List:\n        return self._strategy(arr)\n\n# 使用\nsorter = Sorter()\nprint(sorter.sort([3, 1, 2]))           # [1, 2, 3]\nsorter.strategy = sort_strategy_bubble   # 切换策略\nprint(sorter.sort([3, 1, 2]))           # [1, 2, 3]\n```\n\n### 10.5 装饰器模式\n\n```python\nimport time\nimport functools\n\n# 计时装饰器\ndef timer(func):\n    @functools.wraps(func)\n    def wrapper(*args, **kwargs):\n        start = time.perf_counter()\n        result = func(*args, **kwargs)\n        elapsed = time.perf_counter() - start\n        print(f\"{func.__name__} 耗时: {elapsed:.4f}s\")\n        return result\n    return wrapper\n\n# 重试装饰器\ndef retry(max_attempts=3, delay=1):\n    def decorator(func):\n        @functools.wraps(func)\n        def wrapper(*args, **kwargs):\n            for attempt in range(max_attempts):\n                try:\n                    return func(*args, **kwargs)\n                except Exception as e:\n                    if attempt == max_attempts - 1:\n                        raise\n                    print(f\"重试 {attempt + 1}/{max_attempts}: {e}\")\n                    time.sleep(delay)\n        return wrapper\n    return decorator\n\n# 使用\n@timer\n@retry(max_attempts=3, delay=0.5)\ndef fetch_data(url):\n    import random\n    if random.random() < 0.7:\n        raise ConnectionError(\"网络错误\")\n    return {\"data\": \"ok\"}\n\nresult = fetch_data(\"https://api.example.com\")\n```\n\n### 10.6 代理模式\n\n```python\nclass RealService:\n    def request(self):\n        return \"真实服务响应\"\n\nclass Proxy:\n    def __init__(self, service):\n        self._service = service\n        self._cache = {}\n\n    def request(self):\n        if \"response\" not in self._cache:\n            print(\"代理: 首次请求，转发到真实服务\")\n            self._cache[\"response\"] = self._service.request()\n        else:\n            print(\"代理: 返回缓存结果\")\n        return self._cache[\"response\"]\n\n# 使用\nreal = RealService()\nproxy = Proxy(real)\nprint(proxy.request())  # 代理: 首次请求... → 真实服务响应\nprint(proxy.request())  # 代理: 返回缓存结果 → 真实服务响应\n```\n\n---\n\n## 📏 11. 编码风格与最佳实践\n\n### 11.1 PEP 8 核心规范\n\n```python\n# ✅ 正确示例\n\n# 1. 缩进：4 个空格\ndef greet(name):\n    if name:\n        print(f\"Hello, {name}\")\n\n# 2. 行长度：≤ 79 字符（代码）/ ≤ 72 字符（文档字符串）\n# 长行用括号换行\nresult = (first_variable + second_variable\n          + third_variable)\n\n# 3. 命名约定\nclass UserProfile:          # 类名：大驼峰\n    MAX_RETRY = 3           # 常量：全大写\n\n    def get_user_name(self): # 方法：小写下划线\n        user_name = \"张三\"    # 变量：小写下划线\n        return user_name\n\n# 4. 空行\nclass FirstClass:\n    pass\n\n\nclass SecondClass:\n    pass\n\n# 5. 导入顺序（每组空一行）\nimport os\nimport sys\n\nfrom collections import defaultdict\nfrom pathlib import Path\n\nimport requests\n\n# 6. 字符串引号\nname = \"张三\"           # 统一用双引号\nmessage = 'Hello'       # 或统一用单引号\ndocstring = \"\"\"多行     # 三引号\n字符串\"\"\"\n```\n\n### 11.2 类型注解（Type Hints）\n\n```python\nfrom typing import Optional, List, Dict, Tuple, Union, Any\nfrom dataclasses import dataclass\nfrom pathlib import Path\n\n# 基本类型注解\ndef process_data(\n    items: List[str],\n    config: Dict[str, Any],\n    timeout: float = 30.0,\n    callback: Optional[callable] = None,\n) -> bool:\n    \"\"\"处理数据\"\"\"\n    return True\n\n# dataclass（比普通类简洁）\n@dataclass\nclass User:\n    name: str\n    age: int\n    email: str\n    is_active: bool = True\n\n    def greet(self) -> str:\n        return f\"我是{self.name}，{self.age}岁\"\n\nuser = User(name=\"张三\", age=25, email=\"test@example.com\")\n\n# 类型别名\nVector = List[float]\nMatrix = List[Vector]\n\ndef dot_product(a: Vector, b: Vector) -> float:\n    return sum(x * y for x, y in zip(a, b))\n```\n\n### 11.3 Pythonic 写法\n\n```python\n# 1. 列表推导式（替代 map/filter）\nsquares = [x**2 for x in range(10)]\nevens = [x for x in range(10) if x % 2 == 0]\n\n# 2. 字典推导式\nword_lengths = {word: len(word) for word in [\"hello\", \"world\"]}\n\n# 3. 集合推导式\nunique_chars = {char for char in \"hello world\"}\n\n# 4. 解包（Unpacking）\nfirst, *middle, last = [1, 2, 3, 4, 5]\n# first=1, middle=[2,3,4], last=5\n\na, b = b, a  # 交换变量\n\n# 5. enumerate 替代 range(len())\nfor i, name in enumerate([\"Alice\", \"Bob\"]):\n    print(f\"{i}: {name}\")\n\n# 6. zip 并行迭代\nnames = [\"Alice\", \"Bob\"]\nages = [25, 30]\nfor name, age in zip(names, ages):\n    print(f\"{name} is {age}\")\n\n# 7. any / all\nhas_admin = any(user[\"role\"] == \"admin\" for user in users)\nall_valid = all(age > 0 for age in ages)\n\n# 8. with 语句的隐藏用法\nfrom contextlib import nullcontext\n\nwith open(\"file.txt\") if use_file else nullcontext() as f:\n    if f:\n        data = f.read()\n\n# 9. Walrus Operator（:=，Python 3.8+）\ndata = [1, 2, 3, 4, 5]\nif (n := len(data)) > 3:\n    print(f\"列表有 {n} 个元素\")\n```\n\n### 11.4 错误处理最佳实践\n\n```python\n# ❌ 反面教材\ntry:\n    do_something()\nexcept:\n    pass  # 吞掉所有异常\n\n# ✅ 正确做法\n\n# 1. 捕获具体异常\ntry:\n    result = data[\"key\"]\nexcept KeyError:\n    result = default_value\n\n# 2. 使用自定义异常\nclass AppError(Exception):\n    \"\"\"应用基础异常\"\"\"\n    pass\n\nclass ValidationError(AppError):\n    \"\"\"数据验证错误\"\"\"\n    pass\n\nclass NotFoundError(AppError):\n    \"\"\"资源未找到\"\"\"\n    pass\n\n# 3. 异常链（保留原始错误信息）\ndef process_user(user_id: int):\n    try:\n        user = db.get_user(user_id)\n    except DatabaseError as e:\n        raise NotFoundError(f\"用户 {user_id} 不存在\") from e\n\n# 4. 使用 else 避免不必要的 try 块\ntry:\n    file = open(\"config.json\")\nexcept FileNotFoundError:\n    config = {}\nelse:\n    # 只在文件成功打开时执行\n    config = json.load(file)\nfinally:\n    file.close()\n\n# 5. 日志记录异常\nimport logging\n\nlogger = logging.getLogger(__name__)\n\ntry:\n    risky_operation()\nexcept Exception:\n    logger.exception(\"操作失败\")  # 自动记录堆栈信息\n    raise  # 继续抛出\n```\n\n### 11.5 项目结构建议\n\n```\nmy_project/\n├── src/                    # 源代码\n│   ├── __init__.py\n│   ├── main.py            # 入口\n│   ├── config.py          # 配置\n│   ├── models/            # 数据模型\n│   ├── services/          # 业务逻辑\n│   ├── utils/             # 工具函数\n│   └── exceptions.py      # 自定义异常\n├── tests/                  # 测试\n│   ├── test_models/\n│   └── test_services/\n├── docs/                   # 文档\n├── pyproject.toml          # 项目配置\n├── README.md\n└── .env.example            # 环境变量示例\n```\n\n---\n\n## 📚 本节小结\n\n| 概念 | 说明 |",
+              "oldText": "\n---\n\n## 📚 本节小结\n\n| 概念 | 说明 |"
+            }
+          ],
+          "locations": [
+            {
+              "line": 389,
+              "path": "/Users/yin/PycharmProjects/AIagent/hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md"
+            }
+          ],
+          "rawInput": {
+            "replace_all": false,
+            "file_path": "/Users/yin/PycharmProjects/AIagent/hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md",
+            "old_string": "---\n\n## 📚 本节小结",
+            "new_string": "---\n\n## 🚀 8. 文件操作进阶\n\n### 8.1 pathlib — 面向对象的路径操作\n\n```python\nfrom pathlib import Path\n\n# 创建路径对象\ndata_dir = Path(\"data\")\nfile_path = data_dir / \"users.json\"  # 用 / 拼接路径\n\n# 常用方法\nfile_path.exists()          # 是否存在\nfile_path.is_file()         # 是否是文件\nfile_path.is_dir()          # 是否是目录\nfile_path.name              # 文件名：users.json\nfile_path.stem              # 不带后缀：users\nfile_path.suffix            # 后缀：.json\nfile_path.parent            # 父目录\n\n# 创建目录\ndata_dir.mkdir(parents=True, exist_ok=True)  # 递归创建，已存在不报错\n\n# 遍历目录\nfor f in Path(\".\").glob(\"*.py\"):        # 当前目录所有 .py\n    print(f)\n\nfor f in Path(\".\").rglob(\"*.py\"):       # 递归所有子目录\n    print(f)\n\n# 读写文件（Python 3.6+）\ncontent = file_path.read_text(encoding=\"utf-8\")\nfile_path.write_text(\"hello\", encoding=\"utf-8\")\n\n# 批量操作示例\ndef batch_rename(directory, old_ext, new_ext):\n    \"\"\"批量修改文件后缀\"\"\"\n    count = 0\n    for f in Path(directory).glob(f\"*{old_ext}\"):\n        new_name = f.with_suffix(new_ext)\n        f.rename(new_name)\n        count += 1\n    return count\n```\n\n### 8.2 上下文管理器 — 自定义 with 语句\n\n```python\n# 方式1：类实现\nclass DatabaseConnection:\n    def __init__(self, db_name):\n        self.db_name = db_name\n        self.conn = None\n\n    def __enter__(self):\n        print(f\"连接数据库: {self.db_name}\")\n        self.conn = True  # 模拟连接\n        return self.conn\n\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        print(f\"关闭数据库: {self.db_name}\")\n        self.conn = None\n        return False  # 不抑制异常\n\n# 使用\nwith DatabaseConnection(\"mydb\") as conn:\n    print(\"执行查询...\")\n# 输出：连接数据库 → 执行查询... → 关闭数据库\n\n# 方式2：contextlib 装饰器（更简洁）\nfrom contextlib import contextmanager\n\n@contextmanager\ndef timer(label=\"\"):\n    import time\n    start = time.time()\n    yield  # 这里是 with 块的代码执行点\n    elapsed = time.time() - start\n    print(f\"{label} 耗时: {elapsed:.3f}s\")\n\nwith timer(\"数据处理\"):\n    import time\n    time.sleep(1)\n# 输出：数据处理 耗时: 1.001s\n\n# 方式3：抑制异常\nfrom contextlib import suppress\nimport os\n\nwith suppress(FileNotFoundError):\n    os.remove(\"maybe_exists.txt\")  # 文件不存在也不报错\n```\n\n### 8.3 异步文件操作（asyncio）\n\n```python\nimport asyncio\nimport aiofiles  # 需要安装: pip install aiofiles\n\nasync def read_large_file(filepath):\n    \"\"\"异步读取大文件\"\"\"\n    async with aiofiles.open(filepath, 'r') as f:\n        content = await f.read()\n    return content\n\nasync def write_file_async(filepath, data):\n    \"\"\"异步写入文件\"\"\"\n    async with aiofiles.open(filepath, 'w') as f:\n        await f.write(data)\n\n# 使用\nasync def main():\n    content = await read_large_file(\"data.txt\")\n    print(content[:100])\n\nasyncio.run(main())\n```\n\n### 8.4 CSV 与 Excel 处理\n\n```python\nimport csv\nimport json\nfrom io import StringIO\n\n# 高级 CSV 处理\ndef csv_to_json(filepath):\n    \"\"\"CSV 转 JSON\"\"\"\n    with open(filepath, 'r') as f:\n        reader = csv.DictReader(f)\n        return list(reader)\n\n# 读取 Excel（需要安装: pip install openpyxl）\nfrom openpyxl import Workbook, load_workbook\n\n# 写入 Excel\nwb = Workbook()\nws = wb.active\nws.title = \"用户数据\"\nws.append([\"姓名\", \"年龄\", \"邮箱\"])\nws.append([\"张三\", 25, \"zhangsan@example.com\"])\nwb.save(\"users.xlsx\")\n\n# 读取 Excel\nwb = load_workbook(\"users.xlsx\")\nws = wb.active\nfor row in ws.iter_rows(values_only=True):\n    print(row)\n```\n\n### 8.5 临时文件与内存文件\n\n```python\nimport tempfile\nimport io\n\n# 临时文件\nwith tempfile.NamedTemporaryFile(mode='w', suffix='.txt', delete=False) as f:\n    f.write(\"临时数据\")\n    temp_name = f.name\nprint(f\"临时文件: {temp_name}\")\n\n# 临时目录\nwith tempfile.TemporaryDirectory() as tmpdir:\n    print(f\"临时目录: {tmpdir}\")\n    # 在此范围内使用 tmpdir\n# 目录自动删除\n\n# 内存文件（StringIO / BytesIO）\ntext_buffer = io.StringIO()\ntext_buffer.write(\"在内存中写入\\n\")\ntext_buffer.seek(0)\nprint(text_buffer.read())\n\nbinary_buffer = io.BytesIO()\nbinary_buffer.write(b\"\\x89PNG\\r\\n\")\nbinary_buffer.seek(0)\n```\n\n---\n\n## 🏗️ 9. 常用框架与库\n\n### 9.1 数据处理\n\n| 框架 | 用途 | 安装 |\n|------|------|------|\n| `pandas` | 数据分析、表格处理 | `pip install pandas` |\n| `numpy` | 数值计算、矩阵运算 | `pip install numpy` |\n| `polars` | 高性能 DataFrame（比 pandas 快 10-100x） | `pip install polars` |\n\n```python\nimport pandas as pd\n\n# 读取 CSV\ndf = pd.read_csv(\"data.csv\")\n\n# 基本操作\ndf.head()           # 前5行\ndf.info()           # 数据类型信息\ndf.describe()       # 统计摘要\ndf[\"age\"].mean()    # 平均年龄\ndf[df[\"age\"] > 25]  # 筛选\ndf.groupby(\"city\").count()  # 分组统计\n\n# 保存\ndf.to_csv(\"output.csv\", index=False)\ndf.to_excel(\"output.xlsx\", index=False)\n```\n\n### 9.2 Web 开发\n\n| 框架 | 特点 | 适用场景 |\n|------|------|----------|\n| `FastAPI` | 异步、高性能、自动文档 | API 服务、微服务 |\n| `Django` | 全功能、ORM、Admin | 大型 Web 应用 |\n| `Flask` | 轻量、灵活 | 小型应用、原型 |\n\n```python\n# FastAPI 示例（推荐用于 AI Agent）\nfrom fastapi import FastAPI\nfrom pydantic import BaseModel\n\napp = FastAPI()\n\nclass Message(BaseModel):\n    role: str\n    content: str\n\n@app.get(\"/\")\ndef root():\n    return {\"message\": \"Hello, Agent!\"}\n\n@app.post(\"/chat\")\ndef chat(msg: Message):\n    return {\"reply\": f\"你说: {msg.content}\"}\n\n# 启动: uvicorn main:app --reload\n# 自动文档: http://localhost:8000/docs\n```\n\n### 9.3 测试框架\n\n| 框架 | 用途 | 安装 |\n|------|------|------|\n| `pytest` | 单元测试（推荐） | `pip install pytest` |\n| `pytest-asyncio` | 异步测试 | `pip install pytest-asyncio` |\n| `coverage` | 代码覆盖率 | `pip install coverage` |\n\n```python\n# test_example.py\nimport pytest\n\ndef add(a, b):\n    return a + b\n\ndef test_add_positive():\n    assert add(1, 2) == 3\n\ndef test_add_negative():\n    assert add(-1, -1) == -2\n\ndef test_add_zero():\n    assert add(0, 0) == 0\n\n# 测试异常\ndef test_divide_by_zero():\n    with pytest.raises(ZeroDivisionError):\n        1 / 0\n\n# 参数化测试\n@pytest.mark.parametrize(\"a,b,expected\", [\n    (1, 2, 3),\n    (-1, 1, 0),\n    (0, 0, 0),\n])\ndef test_add_parametrized(a, b, expected):\n    assert add(a, b) == expected\n```\n\n### 9.4 异步与并发\n\n```python\nimport asyncio\nimport aiohttp\nfrom concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor\n\n# asyncio — 协程并发\nasync def fetch_url(url):\n    async with aiohttp.ClientSession() as session:\n        async with session.get(url) as resp:\n            return await resp.text()\n\nasync def fetch_all(urls):\n    tasks = [fetch_url(url) for url in urls]\n    return await asyncio.gather(*tasks)\n\n# ThreadPoolExecutor — I/O 密集型\nimport time\n\ndef slow_io_task(n):\n    time.sleep(1)  # 模拟 I/O\n    return n * 2\n\nwith ThreadPoolExecutor(max_workers=5) as pool:\n    results = list(pool.map(slow_io_task, range(10)))\n    # 10个任务并行，总耗时约 2 秒\n\n# ProcessPoolExecutor — CPU 密集型\ndef heavy_compute(n):\n    return sum(i * i for i in range(n))\n\nwith ProcessPoolExecutor(max_workers=4) as pool:\n    results = list(pool.map(heavy_compute, [10**6] * 4))\n    # 4个进程并行计算\n```\n\n### 9.5 常用工具库速查\n\n| 库 | 用途 | 一句话 |\n|------|------|------|\n| `pydantic` | 数据验证 | 类型注解自动校验 |\n| `rich` | 终端美化 | 彩色输出、进度条 |\n| `loguru` | 日志 | 替代 logging，更简洁 |\n| `click` / `typer` | CLI 工具 | 快速构建命令行 |\n| `httpx` | HTTP 客户端 | 支持同步和异步 |\n| `tenacity` | 重试机制 | 装饰器实现自动重试 |\n| `pyyaml` / `toml` | 配置文件 | YAML/TOML 解析 |\n\n```python\n# loguru 示例（比 logging 更简洁）\nfrom loguru import logger\n\nlogger.add(\"app.log\", rotation=\"10 MB\", retention=\"7 days\")\nlogger.info(\"应用启动\")\nlogger.error(\"出错了: {err}\", err=\"文件不存在\")\n\n# pydantic 数据验证\nfrom pydantic import BaseModel, Field\n\nclass User(BaseModel):\n    name: str = Field(..., min_length=1, max_length=50)\n    age: int = Field(..., ge=0, le=150)\n    email: str\n\nuser = User(name=\"张三\", age=25, email=\"test@example.com\")  # ✅\n# user = User(name=\"\", age=-1, email=\"bad\")  # ❌ ValidationError\n```\n\n---\n\n## 🎨 10. 设计模式\n\n### 10.1 单例模式\n\n```python\n# 方式1：__new__ 实现\nclass Singleton:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance\n\n# 方式2：装饰器实现\ndef singleton(cls):\n    instances = {}\n    def get_instance(*args, **kwargs):\n        if cls not in instances:\n            instances[cls] = cls(*args, **kwargs)\n        return instances[cls]\n    return get_instance\n\n@singleton\nclass Database:\n    def __init__(self):\n        self.connection = \"连接中...\"\n\n# 方式3：模块级单例（最简洁）\n# config.py\nclass _Config:\n    def __init__(self):\n        self.debug = False\n        self.db_url = \"sqlite:///app.db\"\n\nconfig = _Config()  # 导入即单例\n```\n\n### 10.2 工厂模式\n\n```python\nfrom abc import ABC, abstractmethod\n\nclass Storage(ABC):\n    @abstractmethod\n    def save(self, data):\n        pass\n\n    @abstractmethod\n    def load(self, key):\n        pass\n\nclass FileStorage(Storage):\n    def save(self, data):\n        print(f\"保存到文件: {data}\")\n\n    def load(self, key):\n        print(f\"从文件加载: {key}\")\n        return {}\n\nclass RedisStorage(Storage):\n    def save(self, data):\n        print(f\"保存到 Redis: {data}\")\n\n    def load(self, key):\n        print(f\"从 Redis 加载: {key}\")\n        return {}\n\nclass StorageFactory:\n    _storages = {\n        \"file\": FileStorage,\n        \"redis\": RedisStorage,\n    }\n\n    @classmethod\n    def create(cls, storage_type: str) -> Storage:\n        if storage_type not in cls._storages:\n            raise ValueError(f\"未知存储类型: {storage_type}\")\n        return cls._storages[storage_type]()\n\n    @classmethod\n    def register(cls, name: str, storage_class):\n        cls._storages[name] = storage_class\n\n# 使用\nstorage = StorageFactory.create(\"file\")\nstorage.save({\"key\": \"value\"})\n```\n\n### 10.3 观察者模式（事件系统）\n\n```python\nfrom typing import Callable, Dict, List\n\nclass EventEmitter:\n    def __init__(self):\n        self._listeners: Dict[str, List[Callable]] = {}\n\n    def on(self, event: str, callback: Callable):\n        if event not in self._listeners:\n            self._listeners[event] = []\n        self._listeners[event].append(callback)\n\n    def emit(self, event: str, *args, **kwargs):\n        for callback in self._listeners.get(event, []):\n            callback(*args, **kwargs)\n\n    def off(self, event: str, callback: Callable):\n        if event in self._listeners:\n            self._listeners[event].remove(callback)\n\n# 使用\nemitter = EventEmitter()\n\ndef on_user_login(user):\n    print(f\"记录日志: {user} 登录了\")\n\ndef send_welcome(user):\n    print(f\"发送欢迎邮件给: {user}\")\n\nemitter.on(\"login\", on_user_login)\nemitter.on(\"login\", send_welcome)\nemitter.emit(\"login\", \"张三\")\n# 输出: 记录日志: 张三 登录了 → 发送欢迎邮件给: 张三\n```\n\n### 10.4 策略模式\n\n```python\nfrom typing import List\n\ndef sort_strategy_bubble(arr: List) -> List:\n    \"\"\"冒泡排序\"\"\"\n    a = arr.copy()\n    for i in range(len(a)):\n        for j in range(len(a) - 1 - i):\n            if a[j] > a[j + 1]:\n                a[j], a[j + 1] = a[j + 1], a[j]\n    return a\n\ndef sort_strategy_builtin(arr: List) -> List:\n    \"\"\"内置排序\"\"\"\n    return sorted(arr)\n\nclass Sorter:\n    def __init__(self, strategy=None):\n        self._strategy = strategy or sort_strategy_builtin\n\n    @property\n    def strategy(self):\n        return self._strategy\n\n    @strategy.setter\n    def strategy(self, strategy):\n        self._strategy = strategy\n\n    def sort(self, arr: List) -> List:\n        return self._strategy(arr)\n\n# 使用\nsorter = Sorter()\nprint(sorter.sort([3, 1, 2]))           # [1, 2, 3]\nsorter.strategy = sort_strategy_bubble   # 切换策略\nprint(sorter.sort([3, 1, 2]))           # [1, 2, 3]\n```\n\n### 10.5 装饰器模式\n\n```python\nimport time\nimport functools\n\n# 计时装饰器\ndef timer(func):\n    @functools.wraps(func)\n    def wrapper(*args, **kwargs):\n        start = time.perf_counter()\n        result = func(*args, **kwargs)\n        elapsed = time.perf_counter() - start\n        print(f\"{func.__name__} 耗时: {elapsed:.4f}s\")\n        return result\n    return wrapper\n\n# 重试装饰器\ndef retry(max_attempts=3, delay=1):\n    def decorator(func):\n        @functools.wraps(func)\n        def wrapper(*args, **kwargs):\n            for attempt in range(max_attempts):\n                try:\n                    return func(*args, **kwargs)\n                except Exception as e:\n                    if attempt == max_attempts - 1:\n                        raise\n                    print(f\"重试 {attempt + 1}/{max_attempts}: {e}\")\n                    time.sleep(delay)\n        return wrapper\n    return decorator\n\n# 使用\n@timer\n@retry(max_attempts=3, delay=0.5)\ndef fetch_data(url):\n    import random\n    if random.random() < 0.7:\n        raise ConnectionError(\"网络错误\")\n    return {\"data\": \"ok\"}\n\nresult = fetch_data(\"https://api.example.com\")\n```\n\n### 10.6 代理模式\n\n```python\nclass RealService:\n    def request(self):\n        return \"真实服务响应\"\n\nclass Proxy:\n    def __init__(self, service):\n        self._service = service\n        self._cache = {}\n\n    def request(self):\n        if \"response\" not in self._cache:\n            print(\"代理: 首次请求，转发到真实服务\")\n            self._cache[\"response\"] = self._service.request()\n        else:\n            print(\"代理: 返回缓存结果\")\n        return self._cache[\"response\"]\n\n# 使用\nreal = RealService()\nproxy = Proxy(real)\nprint(proxy.request())  # 代理: 首次请求... → 真实服务响应\nprint(proxy.request())  # 代理: 返回缓存结果 → 真实服务响应\n```\n\n---\n\n## 📏 11. 编码风格与最佳实践\n\n### 11.1 PEP 8 核心规范\n\n```python\n# ✅ 正确示例\n\n# 1. 缩进：4 个空格\ndef greet(name):\n    if name:\n        print(f\"Hello, {name}\")\n\n# 2. 行长度：≤ 79 字符（代码）/ ≤ 72 字符（文档字符串）\n# 长行用括号换行\nresult = (first_variable + second_variable\n          + third_variable)\n\n# 3. 命名约定\nclass UserProfile:          # 类名：大驼峰\n    MAX_RETRY = 3           # 常量：全大写\n\n    def get_user_name(self): # 方法：小写下划线\n        user_name = \"张三\"    # 变量：小写下划线\n        return user_name\n\n# 4. 空行\nclass FirstClass:\n    pass\n\n\nclass SecondClass:\n    pass\n\n# 5. 导入顺序（每组空一行）\nimport os\nimport sys\n\nfrom collections import defaultdict\nfrom pathlib import Path\n\nimport requests\n\n# 6. 字符串引号\nname = \"张三\"           # 统一用双引号\nmessage = 'Hello'       # 或统一用单引号\ndocstring = \"\"\"多行     # 三引号\n字符串\"\"\"\n```\n\n### 11.2 类型注解（Type Hints）\n\n```python\nfrom typing import Optional, List, Dict, Tuple, Union, Any\nfrom dataclasses import dataclass\nfrom pathlib import Path\n\n# 基本类型注解\ndef process_data(\n    items: List[str],\n    config: Dict[str, Any],\n    timeout: float = 30.0,\n    callback: Optional[callable] = None,\n) -> bool:\n    \"\"\"处理数据\"\"\"\n    return True\n\n# dataclass（比普通类简洁）\n@dataclass\nclass User:\n    name: str\n    age: int\n    email: str\n    is_active: bool = True\n\n    def greet(self) -> str:\n        return f\"我是{self.name}，{self.age}岁\"\n\nuser = User(name=\"张三\", age=25, email=\"test@example.com\")\n\n# 类型别名\nVector = List[float]\nMatrix = List[Vector]\n\ndef dot_product(a: Vector, b: Vector) -> float:\n    return sum(x * y for x, y in zip(a, b))\n```\n\n### 11.3 Pythonic 写法\n\n```python\n# 1. 列表推导式（替代 map/filter）\nsquares = [x**2 for x in range(10)]\nevens = [x for x in range(10) if x % 2 == 0]\n\n# 2. 字典推导式\nword_lengths = {word: len(word) for word in [\"hello\", \"world\"]}\n\n# 3. 集合推导式\nunique_chars = {char for char in \"hello world\"}\n\n# 4. 解包（Unpacking）\nfirst, *middle, last = [1, 2, 3, 4, 5]\n# first=1, middle=[2,3,4], last=5\n\na, b = b, a  # 交换变量\n\n# 5. enumerate 替代 range(len())\nfor i, name in enumerate([\"Alice\", \"Bob\"]):\n    print(f\"{i}: {name}\")\n\n# 6. zip 并行迭代\nnames = [\"Alice\", \"Bob\"]\nages = [25, 30]\nfor name, age in zip(names, ages):\n    print(f\"{name} is {age}\")\n\n# 7. any / all\nhas_admin = any(user[\"role\"] == \"admin\" for user in users)\nall_valid = all(age > 0 for age in ages)\n\n# 8. with 语句的隐藏用法\nfrom contextlib import nullcontext\n\nwith open(\"file.txt\") if use_file else nullcontext() as f:\n    if f:\n        data = f.read()\n\n# 9. Walrus Operator（:=，Python 3.8+）\ndata = [1, 2, 3, 4, 5]\nif (n := len(data)) > 3:\n    print(f\"列表有 {n} 个元素\")\n```\n\n### 11.4 错误处理最佳实践\n\n```python\n# ❌ 反面教材\ntry:\n    do_something()\nexcept:\n    pass  # 吞掉所有异常\n\n# ✅ 正确做法\n\n# 1. 捕获具体异常\ntry:\n    result = data[\"key\"]\nexcept KeyError:\n    result = default_value\n\n# 2. 使用自定义异常\nclass AppError(Exception):\n    \"\"\"应用基础异常\"\"\"\n    pass\n\nclass ValidationError(AppError):\n    \"\"\"数据验证错误\"\"\"\n    pass\n\nclass NotFoundError(AppError):\n    \"\"\"资源未找到\"\"\"\n    pass\n\n# 3. 异常链（保留原始错误信息）\ndef process_user(user_id: int):\n    try:\n        user = db.get_user(user_id)\n    except DatabaseError as e:\n        raise NotFoundError(f\"用户 {user_id} 不存在\") from e\n\n# 4. 使用 else 避免不必要的 try 块\ntry:\n    file = open(\"config.json\")\nexcept FileNotFoundError:\n    config = {}\nelse:\n    # 只在文件成功打开时执行\n    config = json.load(file)\nfinally:\n    file.close()\n\n# 5. 日志记录异常\nimport logging\n\nlogger = logging.getLogger(__name__)\n\ntry:\n    risky_operation()\nexcept Exception:\n    logger.exception(\"操作失败\")  # 自动记录堆栈信息\n    raise  # 继续抛出\n```\n\n### 11.5 项目结构建议\n\n```\nmy_project/\n├── src/                    # 源代码\n│   ├── __init__.py\n│   ├── main.py            # 入口\n│   ├── config.py          # 配置\n│   ├── models/            # 数据模型\n│   ├── services/          # 业务逻辑\n│   ├── utils/             # 工具函数\n│   └── exceptions.py      # 自定义异常\n├── tests/                  # 测试\n│   ├── test_models/\n│   └── test_services/\n├── docs/                   # 文档\n├── pyproject.toml          # 项目配置\n├── README.md\n└── .env.example            # 环境变量示例\n```\n\n---\n\n## 📚 本节小结"
+          }
+        },
+        {
+          "type": "agent_thought",
+          "text": "Now let me update the summary table to reflect the new sections added."
+        }
+      ],
+      "timestamp": "2026-06-24T03:35:48.648Z"
+    },
+    {
+      "id": "176dbecf-b343-4c81-b467-92acab2c0994",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "tool_call",
+          "toolCallId": "call_bf4ea2fdd08148c18f0f1e1e",
+          "title": "Edit hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md",
+          "status": "completed",
+          "kind": "edit",
+          "content": [
+            {
+              "type": "diff",
+              "path": "/Users/yin/PycharmProjects/AIagent/hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md",
+              "newText": "\n| 概念 | 说明 |\n|------|------|\n| 文件操作基础 | 读取、写入、追加、with 语句 |\n| JSON 操作 | 结构化数据存储 |\n| 异常处理 | try-except-else-finally |\n| 自定义异常 | 特定错误类型 |\n| pathlib | 面向对象的路径操作 |\n| 上下文管理器 | 自定义 with 语句 |\n| 异步文件操作 | asyncio + aiofiles |\n| 常用框架 | pandas / FastAPI / pytest / pydantic 等 |\n| 设计模式 | 单例、工厂、观察者、策略、装饰器、代理 |\n| 编码风格 | PEP 8、类型注解、Pythonic 写法 |\n\n---\n",
+              "oldText": "\n| 概念 | 说明 |\n|------|------|\n| 文件操作 | 读取、写入、追加 |\n| with语句 | 自动关闭文件 |\n| JSON | 结构化数据存储 |\n| try-except | 捕获异常 |\n| 自定义异常 | 特定错误类型 |\n\n---\n"
+            },
+            {
+              "type": "diff",
+              "path": "/Users/yin/PycharmProjects/AIagent/hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md",
+              "newText": "\n---\n\n> 💡 **实践建议**：\n> 1. 用 pathlib 重写一个批量文件处理工具\n> 2. 用 FastAPI 写一个简单的 REST API\n> 3. 用 pytest 为你的代码编写测试\n> 4. 用装饰器实现一个自动重试 + 日志的工具函数",
+              "oldText": "\n---\n\n> 💡 **实践建议**：写一个简单的记事本程序，练习文件操作和异常处理。"
+            }
+          ],
+          "locations": [
+            {
+              "line": 1200,
+              "path": "/Users/yin/PycharmProjects/AIagent/hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md"
+            },
+            {
+              "line": 1220,
+              "path": "/Users/yin/PycharmProjects/AIagent/hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md"
+            }
+          ],
+          "rawInput": {
+            "replace_all": false,
+            "file_path": "/Users/yin/PycharmProjects/AIagent/hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md",
+            "old_string": "## 📚 本节小结\n\n| 概念 | 说明 |\n|------|------|\n| 文件操作 | 读取、写入、追加 |\n| with语句 | 自动关闭文件 |\n| JSON | 结构化数据存储 |\n| try-except | 捕获异常 |\n| 自定义异常 | 特定错误类型 |\n\n---\n\n## 🎯 下一步\n\n- **02a - 数学基础：线性代数** - AI的数学基础\n- **03a - 机器学习：基本概念** - ML入门\n\n---\n\n> 💡 **实践建议**：写一个简单的记事本程序，练习文件操作和异常处理。",
+            "new_string": "## 📚 本节小结\n\n| 概念 | 说明 |\n|------|------|\n| 文件操作基础 | 读取、写入、追加、with 语句 |\n| JSON 操作 | 结构化数据存储 |\n| 异常处理 | try-except-else-finally |\n| 自定义异常 | 特定错误类型 |\n| pathlib | 面向对象的路径操作 |\n| 上下文管理器 | 自定义 with 语句 |\n| 异步文件操作 | asyncio + aiofiles |\n| 常用框架 | pandas / FastAPI / pytest / pydantic 等 |\n| 设计模式 | 单例、工厂、观察者、策略、装饰器、代理 |\n| 编码风格 | PEP 8、类型注解、Pythonic 写法 |\n\n---\n\n## 🎯 下一步\n\n- **02a - 数学基础：线性代数** - AI的数学基础\n- **03a - 机器学习：基本概念** - ML入门\n\n---\n\n> 💡 **实践建议**：\n> 1. 用 pathlib 重写一个批量文件处理工具\n> 2. 用 FastAPI 写一个简单的 REST API\n> 3. 用 pytest 为你的代码编写测试\n> 4. 用装饰器实现一个自动重试 + 日志的工具函数"
+          }
+        },
+        {
+          "type": "agent_thought",
+          "text": "Now let me update the frontmatter tags to reflect the new content."
+        }
+      ],
+      "timestamp": "2026-06-24T03:36:40.431Z"
+    },
+    {
+      "id": "1c5c54cd-e5b9-4a14-ad2f-22662ea2c11d",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "tool_call",
+          "toolCallId": "call_743553c89e4f4f3980dedd7f",
+          "title": "Edit hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md",
+          "status": "completed",
+          "kind": "edit",
+          "content": [
+            {
+              "type": "diff",
+              "path": "/Users/yin/PycharmProjects/AIagent/hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md",
+              "newText": "---\ntitle: \"Python基础：文件操作与异常处理\"\ndescription: \"掌握文件读写、错误处理，以及进阶技巧、常用框架、设计模式与编码风格\"\ntags: [Python, File-IO, Exception, Basics, Advanced, Frameworks, Design-Patterns]\n---\n\n# 📁 Python基础：文件操作与异常处理",
+              "oldText": "---\ntitle: \"Python基础：文件操作与异常处理\"\ndescription: \"掌握文件读写和错误处理\"\ntags: [Python, File-IO, Exception, Basics]\n---\n\n# 📁 Python基础：文件操作与异常处理"
+            }
+          ],
+          "locations": [
+            {
+              "line": 1,
+              "path": "/Users/yin/PycharmProjects/AIagent/hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md"
+            }
+          ],
+          "rawInput": {
+            "replace_all": false,
+            "file_path": "/Users/yin/PycharmProjects/AIagent/hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md",
+            "old_string": "---\ntitle: \"Python基础：文件操作与异常处理\"\ndescription: \"掌握文件读写和错误处理\"\ntags: [Python, File-IO, Exception, Basics]\n---",
+            "new_string": "---\ntitle: \"Python基础：文件操作与异常处理\"\ndescription: \"掌握文件读写、错误处理，以及进阶技巧、常用框架、设计模式与编码风格\"\ntags: [Python, File-IO, Exception, Basics, Advanced, Frameworks, Design-Patterns]\n---"
+          }
+        },
+        {
+          "type": "agent_thought",
+          "text": "I've successfully added the advanced Python content. Let me verify the final state of the file to make sure everything looks good."
+        }
+      ],
+      "timestamp": "2026-06-24T03:36:48.613Z"
+    },
+    {
+      "id": "a1c7fc18-dfa6-40d5-a3ed-b689a332296e",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "tool_call",
+          "toolCallId": "call_e992117eff594c13bf01cc9e",
+          "title": "Read hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md",
+          "status": "completed",
+          "kind": "read",
+          "content": [],
+          "locations": [
+            {
+              "line": 1,
+              "path": "/Users/yin/PycharmProjects/AIagent/hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md"
+            }
+          ],
+          "rawInput": {
+            "file_path": "/Users/yin/PycharmProjects/AIagent/hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md"
+          }
+        },
+        {
+          "type": "agent_thought",
+          "text": "The file looks good. Let me summarize what I've added to the note."
+        },
+        {
+          "type": "text",
+          "text": "已完成！在原有基础内容之后，新增了以下 4 大板块：\n\n### 🚀 8. 文件操作进阶\n- **pathlib** — 面向对象的路径操作（glob 遍历、批量重命名）\n- **上下文管理器** — 类实现 / `contextlib` 装饰器 / `suppress` 抑制异常\n- **异步文件操作** — asyncio + aiofiles\n- **CSV / Excel 处理** — csv 模块 + openpyxl\n- **临时文件与内存文件** — tempfile / StringIO / BytesIO\n\n### 🏗️ 9. 常用框架与库\n- **数据处理** — pandas / numpy / polars\n- **Web 开发** — FastAPI（推荐用于 Agent）/ Django / Flask\n- **测试框架** — pytest + 参数化测试\n- **异步与并发** — asyncio / ThreadPoolExecutor / ProcessPoolExecutor\n- **工具库速查** — pydantic / rich / loguru / tenacity / httpx 等\n\n### 🎨 10. 设计模式\n- 单例模式（3 种实现）\n- 工厂模式（可注册）\n- 观察者模式（事件系统）\n- 策略模式（可切换算法）\n- 装饰器模式（计时 + 重试）\n- 代理模式（缓存代理）\n\n### 📏 11. 编码风格与最佳实践\n- PEP 8 核心规范\n- 类型注解 + dataclass\n- Pythonic 写法（推导式、解包、walrus operator 等）\n- 错误处理最佳实践（异常链、自定义异常层级）\n- 项目结构建议"
+        }
+      ],
+      "timestamp": "2026-06-24T03:36:52.265Z"
+    },
+    {
+      "id": "7fb5fdac-2375-4c3e-b10a-1a80c5c4fe0e",
+      "role": "user",
+      "content": [
+        {
+          "type": "text_with_context",
+          "text": "不是写到这个文档中，注意分小节，分文档，以及文档等关联性",
+          "autoMentionContext": {
+            "noteName": "01c-Python基础-文件操作与异常处理",
+            "notePath": "hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md"
+          }
+        }
+      ],
+      "timestamp": "2026-06-24T03:39:31.350Z"
+    },
+    {
+      "id": "59386c98-77d7-493d-8e5a-4d6d333e5c9b",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "agent_thought",
+          "text": "The user wants me to create separate documents for the advanced Python content instead of putting everything into one document. They want:\n1. Properly split into smaller sections\n2. Separate documents\n3. Links between documents for discoverability\n\nLet me first look at the directory structure to understand how the existing docs are organized."
+        }
+      ],
+      "timestamp": "2026-06-24T03:39:34.596Z"
+    },
+    {
+      "id": "8d358fb3-664d-4917-bffe-d0e18e7fca96",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "tool_call",
+          "toolCallId": "call_877463adc5c5478082a4bd86",
+          "title": "ls -la \"/Users/yin/PycharmProjects/AIagent/hello-agents/01-智能体与LLM基础/\"",
+          "status": "completed",
+          "kind": "execute",
+          "content": [],
+          "rawInput": {
+            "command": "ls -la \"/Users/yin/PycharmProjects/AIagent/hello-agents/01-智能体与LLM基础/\"",
+            "description": "List files in the directory"
+          }
+        },
+        {
+          "type": "agent_thought",
+          "text": "Now I understand the structure. The files follow a naming convention like `01a-`, `01b-`, `01c-` etc. I need to:\n\n1. First, revert the 01c file to remove the advanced content I added\n2. Create new separate documents for:\n   - 01d-Python进阶-文件操作高级技巧.md\n   - 01e-Python进阶-常用框架与库.md\n   - 01f-Python进阶-设计模式.md\n   - 01g-Python进阶-编码风格与最佳实践.md\n3. Add links between documents\n4. Update the index file\n\nLet me first read the current 01c file to understand what was added, then create the new files."
+        }
+      ],
+      "timestamp": "2026-06-24T03:39:35.613Z"
+    },
+    {
+      "id": "044beb10-8625-410a-b1bb-dfeac400cdfb",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "tool_call",
+          "toolCallId": "call_52639327c007486598947a30",
+          "title": "Read hello-agents/01-智能体与LLM基础/00-基础知识索引.md",
+          "status": "completed",
+          "kind": "read",
+          "content": [],
+          "locations": [
+            {
+              "line": 1,
+              "path": "/Users/yin/PycharmProjects/AIagent/hello-agents/01-智能体与LLM基础/00-基础知识索引.md"
+            }
+          ],
+          "rawInput": {
+            "file_path": "/Users/yin/PycharmProjects/AIagent/hello-agents/01-智能体与LLM基础/00-基础知识索引.md"
+          }
+        },
+        {
+          "type": "agent_thought",
+          "text": "Now I understand the structure. I need to:\n\n1. First revert the 01c file to remove the advanced content I added\n2. Create new separate documents for:\n   - 01d-Python进阶-文件操作高级技巧.md\n   - 01e-Python进阶-常用框架与库.md\n   - 01f-Python进阶-设计模式.md\n   - 01g-Python进阶-编码风格与最佳实践.md\n3. Add links between documents\n4. Update the index file\n\nLet me start by reverting the 01c file to its original state (just the basic content), then create the new files."
+        },
+        {
+          "type": "text",
+          "text": "明白了，我来把内容拆分成独立文档。先恢复 01c 的原始内容，然后创建新的进阶文档。"
+        }
+      ],
+      "timestamp": "2026-06-24T03:39:39.562Z"
+    },
+    {
+      "id": "77771ed1-aa92-475c-a313-69c49bd4e8af",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "tool_call",
+          "toolCallId": "call_92a703841be641a9b07ca578",
+          "title": "Write",
+          "status": "pending",
+          "kind": "edit",
+          "locations": [],
+          "rawInput": {}
+        }
+      ],
+      "timestamp": "2026-06-24T03:39:44.428Z"
+    }
+  ],
+  "savedAt": "2026-06-24T03:42:34.217Z"
+}

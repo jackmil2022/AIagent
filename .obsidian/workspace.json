@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Transformers快速入门/07-第六章：必要的 Pytorch 知识.md",
+                "file": "hello-agents/01-智能体与LLM基础/01f-Python进阶-设计模式.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "07-第六章：必要的 Pytorch 知识"
+              "title": "01f-Python进阶-设计模式"
             }
           }
         ]
@@ -208,6 +208,18 @@
   },
   "active": "b527c8e5f7966fe5",
   "lastOpenFiles": [
+    "hello-agents/01-智能体与LLM基础/01e-Python进阶-常用框架与库.md",
+    "hello-agents/01-智能体与LLM基础/01f-Python进阶-设计模式.md",
+    "01-PyTorch基础-土堆/Tensorboard使用.md",
+    "hello-agents/01-智能体与LLM基础/01g-Python进阶-编码风格与最佳实践.md",
+    "hello-agents/01-智能体与LLM基础/01d-Python进阶-文件操作高级技巧.md",
+    "01-PyTorch基础-土堆/Pytorch安装.md",
+    "01-PyTorch基础-土堆/最大池化层.md",
+    "01-PyTorch基础-土堆/完整模型训练套路.md",
+    "01-PyTorch基础-土堆/卷积层.md",
+    "hello-agents/01-智能体与LLM基础/01c-Python基础-文件操作与异常处理.md",
+    "hello-agents/01-智能体与LLM基础/01b-Python基础-函数与模块.md",
+    "Transformers快速入门/07-第六章：必要的 Pytorch 知识.md",
     "CV-深度学习笔记/00-目录索引.md",
     "hello-agents/03-高级知识扩展/11-Agentic-RL.md",
     "hello-agents/02-构建LLM智能体/12a-LangChain-核心概念.md",
@@ -216,24 +228,12 @@
     "CV-深度学习笔记/01-PyTorch基础-土堆/搭建小实战和Sequential使用.md",
     "CV-深度学习笔记/01-PyTorch基础-土堆/查看开源项目.md",
     "02-深度学习理论-李沐/Kaggle房价预测.md",
-    "01-PyTorch基础-土堆/Tensorboard使用.md",
-    "01-PyTorch基础-土堆/Pytorch安装.md",
-    "01-PyTorch基础-土堆/最大池化层.md",
-    "01-PyTorch基础-土堆/完整模型训练套路.md",
-    "01-PyTorch基础-土堆/卷积层.md",
     "CV-深度学习笔记/02-深度学习理论-李沐/池化层.md",
     "CV-深度学习笔记/02-深度学习理论-李沐/残差神经网络ResNet.md",
     "CV-深度学习笔记/02-深度学习理论-李沐/编码器解码器架构.md",
     "CV-深度学习笔记/04-大模型与Agent/向量数据库.md",
     "CV-深度学习笔记/04-大模型与Agent/API基本参数.md",
     "CV-深度学习笔记/04-大模型与Agent/PythonAPI环境安装.md",
-    "CV-深度学习笔记/03-深度学习课程-吴恩达/课程1_第2周_测验题.md",
-    "CV-深度学习笔记/03-深度学习课程-吴恩达/课程1_第1周_作业题_numpy构建基本函数.md",
-    "CV-深度学习笔记/03-深度学习课程-吴恩达/课程1_第1周_深度学习概述.md",
-    "CV-深度学习笔记/03-深度学习课程-吴恩达/课程1_第1周_测验题.md",
-    "CV-深度学习笔记/01-PyTorch基础-土堆/Transforms使用.md",
-    "CV-深度学习笔记/01-PyTorch基础-土堆/损失函数与反向传播.md",
-    "CV-深度学习笔记/01-PyTorch基础-土堆/利用GPU训练.md",
     "convert_notebooks.py",
     "02-深度学习理论-李沐",
     "01-PyTorch基础-土堆",
