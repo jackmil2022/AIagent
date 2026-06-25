@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "Softmax回归、损失函数、分类"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 基础模型]
 ---
 
 # Softmax回归、损失函数、分类

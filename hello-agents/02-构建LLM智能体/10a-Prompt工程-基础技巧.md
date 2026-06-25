@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "Prompt工程：基础技巧"
 description: "从零开始学习如何与大模型对话"
 tags: [Prompt, LLM, Engineering, Beginner]

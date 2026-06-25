@@ -1,4 +1,5 @@
 ---
+module: "CV-深度学习笔记"
 title: "课程2 第3周 超参数调试、Batch正则化和编程框架"
 tags: [CV, Deep-Learning, PyTorch]
 ---

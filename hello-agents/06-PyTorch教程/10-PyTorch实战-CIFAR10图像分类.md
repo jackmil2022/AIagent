@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "PyTorch实战：CIFAR10图像分类"
 description: "用CNN完成一个完整的图像分类项目"
 tags: [PyTorch, CIFAR10, CNN, Image-Classification, Practice]

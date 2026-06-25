@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "RAG：基础概念"
 description: "检索增强生成的核心原理与架构"
 tags: [RAG, LLM, Retrieval, Generation]

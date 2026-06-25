@@ -1,3 +1,10 @@
+---
+aliases:
+  - "00-索引"
+tags: [Transformers, HuggingFace, Index]
+module: "Transformers快速入门"
+---
+
 # Transformers快速入门
 
 > 来源：https://transformers.run/

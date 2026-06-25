@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "Agent架构：多Agent协作"
 description: "多个Agent协同工作的设计模式"
 tags: [Agent, Multi-Agent, Collaboration, Architecture]

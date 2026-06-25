@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "经典神经网络LeNet"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 经典网络, CNN]
 ---
 
 # 经典神经网络LeNet

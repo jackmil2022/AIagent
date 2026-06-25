@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "NLP基础：文本表示"
 description: "如何让计算机理解人类语言"
 tags: [NLP, Embedding, Word2Vec, Text-Representation]

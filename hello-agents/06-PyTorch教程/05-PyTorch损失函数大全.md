@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "PyTorch损失函数大全"
 description: "理解各种损失函数的用途和选择"
 tags: [PyTorch, Loss-Function, Training]

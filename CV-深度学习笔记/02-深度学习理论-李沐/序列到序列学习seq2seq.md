@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "序列到序列学习seq2seq"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, Seq2Seq]
 ---
 
 # 序列到序列学习seq2seq

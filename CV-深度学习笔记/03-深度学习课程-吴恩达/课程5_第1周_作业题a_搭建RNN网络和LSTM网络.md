@@ -1,4 +1,5 @@
 ---
+module: "CV-深度学习笔记"
 title: "课程5 第1周 作业题a 搭建RNN网络和LSTM网络"
 tags: [CV, Deep-Learning, PyTorch]
 ---

@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "Pytorch安装"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 环境配置]
 ---
 
 # Pytorch安装

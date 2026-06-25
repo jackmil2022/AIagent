@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "LangChain：工具使用"
 description: "让LLM调用外部工具"
 tags: [LangChain, Tools, Function-Calling]

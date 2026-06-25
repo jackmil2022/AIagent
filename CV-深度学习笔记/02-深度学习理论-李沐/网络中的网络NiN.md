@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "网络中的网络NiN"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 经典网络, CNN]
 ---
 
 # 网络中的网络NiN

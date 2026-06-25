@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "搭建小实战和Sequential使用"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 网络搭建]
 ---
 
 # 搭建小实战和Sequential使用

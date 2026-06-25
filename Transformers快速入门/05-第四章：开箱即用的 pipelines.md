@@ -1,3 +1,9 @@
+---
+title: "第四章：开箱即用的 pipelines"
+module: "Transformers快速入门"
+tags: [Transformers, HuggingFace, NLP]
+---
+
 # 第四章：开箱即用的 pipelines
 
 > 来源：https://transformers.run/c2/2021-12-08-transformers-note-1/

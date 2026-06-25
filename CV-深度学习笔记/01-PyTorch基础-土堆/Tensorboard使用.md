@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "Tensorboard使用"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 可视化]
 ---
 
 # Tensorboard使用

@@ -1,4 +1,5 @@
 ---
+module: "CV-深度学习笔记"
 title: "PythonAPI环境安装"
 tags: [CV, Deep-Learning, PyTorch]
 ---

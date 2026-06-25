@@ -1,4 +1,5 @@
 ---
+module: "CV-深度学习笔记"
 title: "课程4 第2周 作业题 Keras入门与残差网络搭建"
 tags: [CV, Deep-Learning, PyTorch]
 ---

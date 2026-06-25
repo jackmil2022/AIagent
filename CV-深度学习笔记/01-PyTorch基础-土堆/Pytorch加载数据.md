@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "Pytorch加载数据"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 数据加载]
 ---
 
 # Pytorch加载数据

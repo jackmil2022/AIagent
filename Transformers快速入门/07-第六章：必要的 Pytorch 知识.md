@@ -1,3 +1,9 @@
+---
+title: "第六章：必要的 Pytorch 知识"
+module: "Transformers快速入门"
+tags: [Transformers, HuggingFace, NLP]
+---
+
 # 第六章：必要的 Pytorch 知识
 
 > 来源：https://transformers.run/c2/2021-12-14-transformers-note-3/

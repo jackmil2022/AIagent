@@ -1,13 +1,19 @@
 ---
+aliases:
+  - "00-基础知识索引"
 title: "基础知识索引"
 tags: [Index, MOC, Foundation]
 ---
+aliases:
+  - "00-基础知识索引"
 
 # 🌱 基础知识索引
 
 > **从零开始的学习路径**
 
 ---
+aliases:
+  - "00-基础知识索引"
 
 ## 学习顺序
 
@@ -28,6 +34,8 @@ Transformer
 ```
 
 ---
+aliases:
+  - "00-基础知识索引"
 
 ## Python 编程
 
@@ -49,6 +57,8 @@ Transformer
 | [[01g-Python进阶-编码风格与最佳实践]] | PEP 8、类型注解、Pythonic 写法 | [[01b-Python基础-函数与模块]] |
 
 ---
+aliases:
+  - "00-基础知识索引"
 
 ## 数学基础
 
@@ -59,6 +69,8 @@ Transformer
 | [[02c-数学基础-微积分与优化]] | 导数、梯度、优化 | [[02a-数学基础-线性代数]] |
 
 ---
+aliases:
+  - "00-基础知识索引"
 
 ## 机器学习
 
@@ -67,6 +79,8 @@ Transformer
 | [[03a-机器学习-基本概念]] | 监督/无监督、评估指标 | [[02b-数学基础-概率论与统计]] |
 
 ---
+aliases:
+  - "00-基础知识索引"
 
 ## 深度学习
 
@@ -76,6 +90,8 @@ Transformer
 | [[04c-深度学习-PyTorch实战]] | Tensor、nn.Module | [[04a-深度学习-神经网络基础]] |
 
 ---
+aliases:
+  - "00-基础知识索引"
 
 ## NLP 基础
 
@@ -87,6 +103,8 @@ Transformer
 | [[05d-NLP基础-注意力机制]] | Self-Attention、Multi-Head | [[05c-NLP基础-序列模型]] |
 
 ---
+aliases:
+  - "00-基础知识索引"
 
 ## Transformer
 
@@ -95,6 +113,8 @@ Transformer
 | [[06a-Transformer-架构详解]] | Encoder-Decoder、位置编码 | [[05d-NLP基础-注意力机制]] |
 
 ---
+aliases:
+  - "00-基础知识索引"
 
 ## 预训练模型
 
@@ -103,8 +123,10 @@ Transformer
 | [[07a-预训练模型-从BERT到GPT]] | 预训练范式、BERT、GPT | [[06a-Transformer-架构详解]] |
 
 ---
+aliases:
+  - "00-基础知识索引"
 
 ## 关联笔记
 
-- [[../00-目录索引|返回主索引]]
-- [[../02-构建LLM智能体/00-应用开发索引|下一步：应用开发]]
+- [[../00-Hello-Agents-目录索引|返回主索引]]
+- [[../02-构建LLM智能体/00-构建LLM智能体-索引|下一步：应用开发]]

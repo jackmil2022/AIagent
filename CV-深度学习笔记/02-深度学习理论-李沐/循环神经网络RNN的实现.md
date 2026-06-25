@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "循环神经网络RNN的实现"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, RNN, 序列模型]
 ---
 
 # 循环神经网络RNN的实现

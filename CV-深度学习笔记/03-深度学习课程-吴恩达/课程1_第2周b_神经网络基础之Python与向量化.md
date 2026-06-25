@@ -1,4 +1,5 @@
 ---
+module: "CV-深度学习笔记"
 title: "课程1 第2周b 神经网络基础之Python与向量化"
 tags: [CV, Deep-Learning, PyTorch]
 ---

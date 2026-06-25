@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "微调：LoRA与QLoRA"
 description: "参数高效微调的最佳实践"
 tags: [Fine-tuning, LoRA, QLoRA, PEFT]

@@ -1,4 +1,5 @@
 ---
+module: "CV-深度学习笔记"
 title: "课程1 第1周 作业题 numpy构建基本函数"
 tags: [CV, Deep-Learning, PyTorch]
 ---

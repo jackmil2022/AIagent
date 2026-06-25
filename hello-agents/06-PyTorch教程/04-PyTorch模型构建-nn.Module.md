@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "PyTorch模型构建：nn.Module"
 description: "学习如何用nn.Module搭建神经网络模型"
 tags: [PyTorch, nn.Module, Neural-Network, Model]

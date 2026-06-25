@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "合并行连接的网络GoogLeNet"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 经典网络, CNN]
 ---
 
 # 合并行连接的网络GoogLeNet

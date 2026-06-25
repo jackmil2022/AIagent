@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "残差神经网络ResNet"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 经典网络, CNN]
 ---
 
 # 残差神经网络ResNet

@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "Python基础：文件操作与异常处理"
 description: "掌握文件读写和错误处理"
 tags: [Python, File-IO, Exception, Basics]

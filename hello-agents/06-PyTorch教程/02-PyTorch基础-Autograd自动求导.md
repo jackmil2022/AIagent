@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "PyTorch基础：Autograd自动求导"
 description: "理解梯度的概念，掌握PyTorch自动求导机制"
 tags: [PyTorch, Autograd, Gradient, Basics]

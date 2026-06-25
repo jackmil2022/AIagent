@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "Kaggle房价预测"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 实战]
 ---
 
 # Kaggle房价预测

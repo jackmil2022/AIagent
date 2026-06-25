@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "Python进阶：编码风格与最佳实践"
 description: "PEP 8、类型注解、Pythonic 写法、错误处理、项目结构"
 tags: [Python, Advanced, PEP8, TypeHints, Best-Practices]

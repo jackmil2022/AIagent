@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "使用购买GPU"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 硬件]
 ---
 
 # 使用购买GPU

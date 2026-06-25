@@ -1,3 +1,9 @@
+---
+title: "Transformers快速入门"
+module: "Transformers快速入门"
+tags: [Transformers, HuggingFace, NLP]
+---
+
 # Transformers快速入门
 
 > 来源：https://transformers.run/

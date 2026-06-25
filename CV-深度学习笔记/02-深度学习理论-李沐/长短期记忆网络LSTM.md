@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "长短期记忆网络LSTM"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, LSTM, 序列模型]
 ---
 
 # 长短期记忆网络LSTM

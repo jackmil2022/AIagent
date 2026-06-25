@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "Python进阶：常用框架与库"
 description: "数据处理、Web开发、测试、异步并发等常用框架速查"
 tags: [Python, Advanced, Frameworks, Pandas, FastAPI, pytest]

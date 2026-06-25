@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "RAG：实战与优化"
 description: "构建完整的RAG系统并优化"
 tags: [RAG,实战, Optimization, Production]

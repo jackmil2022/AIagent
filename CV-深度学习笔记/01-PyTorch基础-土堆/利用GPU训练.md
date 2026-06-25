@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "利用GPU训练"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, GPU, 加速]
 ---
 
 # 利用GPU训练

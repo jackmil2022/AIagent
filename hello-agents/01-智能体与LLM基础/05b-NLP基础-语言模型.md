@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "NLP基础：语言模型"
 description: "理解语言模型的原理"
 tags: [NLP, Language-Model, Perplexity, Neural-LM]

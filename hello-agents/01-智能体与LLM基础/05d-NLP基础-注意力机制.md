@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "NLP基础：注意力机制"
 description: "Transformer的基础"
 tags: [NLP, Attention, Self-Attention, Multi-Head]

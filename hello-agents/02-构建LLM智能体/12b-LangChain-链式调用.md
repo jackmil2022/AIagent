@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "LangChain：链式调用"
 description: "深入LCEL表达式语言"
 tags: [LangChain, LCEL, Chain, Runnable]

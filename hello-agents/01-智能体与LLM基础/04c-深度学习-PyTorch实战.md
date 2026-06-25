@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "深度学习：PyTorch实战"
 description: "使用PyTorch构建神经网络"
 tags: [Deep-Learning, PyTorch, Tensor, Autograd]

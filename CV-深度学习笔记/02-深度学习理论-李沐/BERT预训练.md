@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "BERT预训练"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 预训练模型, BERT]
 ---
 
 # BERT预训练

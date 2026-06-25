@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "物体检测算法R-CNN、SSD、YOLO"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 目标检测]
 ---
 
 # 物体检测算法R-CNN、SSD、YOLO

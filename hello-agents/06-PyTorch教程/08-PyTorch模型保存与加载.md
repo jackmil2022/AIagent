@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "PyTorch模型保存与加载"
 description: "学习如何保存训练好的模型并在以后使用"
 tags: [PyTorch, Save, Load, Model, Deployment]

@@ -80,6 +80,14 @@
   },
   "savedSessions": [
     {
+      "sessionId": "febb95f3-46c0-4331-9442-abf0ddf3381b",
+      "agentId": "claude-code-acp",
+      "cwd": "/Users/yin/PycharmProjects/AIagent",
+      "title": "帮我重新梳理一下整个项目的索引，只要一个总索引就行",
+      "createdAt": "2026-06-25T01:22:01.679Z",
+      "updatedAt": "2026-06-25T01:22:01.679Z"
+    },
+    {
       "sessionId": "d495b430-6259-4ea5-9ec3-4ec37dbe9ad2",
       "agentId": "claude-code-acp",
       "cwd": "/Users/yin/PycharmProjects/AIagent",

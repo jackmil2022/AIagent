@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "PyTorch基础：Tensor张量"
 description: "理解Tensor是什么，掌握创建和操作Tensor的方法"
 tags: [PyTorch, Tensor, Basics]

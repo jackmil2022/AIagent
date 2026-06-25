@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "PyTorch可视化与调试"
 description: "用TensorBoard等工具可视化训练过程和模型"
 tags: [PyTorch, Visualization, TensorBoard, Debug]

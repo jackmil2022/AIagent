@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "多GPU训练实现"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 分布式训练]
 ---
 
 # 多GPU训练实现

@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "RAG：高级检索策略"
 description: "混合检索、重排序等高级技巧"
 tags: [RAG, Hybrid-Search, Reranking, Advanced]

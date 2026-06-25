@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d890259134023e7c",
+        "id": "e5be4ab7254415f4",
         "type": "tabs",
         "children": [
           {
-            "id": "1e23a5858b86859d",
+            "id": "8ca24044d8876464",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "投流agent/05-知识库/汽车投流研究报告.md",
+                "file": "CV-深度学习笔记/03-深度学习课程-吴恩达/课程1_第1周_测验题.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "汽车投流研究报告"
+              "title": "课程1_第1周_测验题"
             }
           }
         ]
@@ -94,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "投流agent/05-知识库/汽车投流研究报告.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "汽车投流研究报告 的反向链接列表"
             }
           },
           {
@@ -112,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "投流agent/05-知识库/汽车投流研究报告.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "出链"
+              "title": "汽车投流研究报告 的出链列表"
             }
           },
           {
@@ -154,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Transformers快速入门/04-第三章：注意力机制.md",
+                "file": "投流agent/05-知识库/汽车投流研究报告.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "04-第三章：注意力机制 的大纲"
+              "title": "汽车投流研究报告 的大纲"
             }
           },
           {
@@ -208,41 +210,41 @@
   },
   "active": "b527c8e5f7966fe5",
   "lastOpenFiles": [
-    "投流agent/01-汽车投流入门/01-汽车投流概述.md",
+    "CV-深度学习笔记/03-深度学习课程-吴恩达/课程1_第1周_深度学习概述.md",
+    "INDEX.md",
+    "00-AIagent项目总览.base",
+    "00-AIagent项目总索引.md",
+    "CV-深度学习笔记/00-CV深度学习笔记-目录索引.md",
+    "CV-深度学习笔记/00-CV深度学习笔记-项目说明.md",
+    "Transformers快速入门/00-Transformers快速入门-目录索引.md",
+    "hello-agents/06-PyTorch教程/00-PyTorch教程-索引.md",
+    "hello-agents/05-毕业设计与展望/00-毕业设计与展望-索引.md",
+    "hello-agents/04-综合案例进阶/00-综合案例进阶-索引.md",
+    "hello-agents/03-高级知识扩展/00-高级知识扩展-索引.md",
+    "hello-agents/02-构建LLM智能体/00-构建LLM智能体-索引.md",
+    "hello-agents/01-智能体与LLM基础/00-智能体与LLM基础-索引.md",
+    "hello-agents/00-Hello-Agents-前言.md",
+    "hello-agents/00-Hello-Agents-目录索引.md",
+    "投流agent/投流Agent行业趋势分析.md",
+    "投流agent/00-投流Agent项目说明.md",
+    "投流agent/05-知识库/汽车投流研究报告-从入门到精通.md",
+    "投流agent/03-优化师知识/00-优化师知识体系概览.md",
+    "投流agent/03-优化师知识/03-优化师实战案例与最佳实践.md",
+    "投流agent/03-优化师知识/02-优化师实用工具与资源.md",
+    "投流agent/03-优化师知识/01-优化师基础知识-定义分类与核心技能.md",
+    "投流agent/01-汽车投流入门/03-汽车投放平台-抖音微信百度.md",
+    "投流agent/01-汽车投流入门/02-汽车优化师角色-岗位职责与技能.md",
+    "投流agent/01-汽车投流入门/01-汽车投流概述-投流概念与核心指标.md",
+    "AIagent项目总览.base",
     "投流agent/05-知识库/汽车投流研究报告.md",
+    "投流agent/01-汽车投流入门/01-汽车投流概述.md",
     "投流agent/05-知识库",
-    "投流agent/02-平台教程/投流agent教程合集.md",
-    "投流agent/行业趋势分析.md",
-    "投流agent/03-优化师知识/01-优化师基础知识.md",
-    "投流agent/01-汽车投流入门/03-汽车投放平台.md",
-    "投流agent/01-汽车投流入门/02-汽车优化师角色.md",
-    "投流agent/03-优化师知识/02-实用工具与资源.md",
-    "投流agent/05-工具与资源/投流Agent工具与资源生态大全.md",
-    "投流agent/04-实战案例/投流agent实战案例集.md",
-    "投流agent/06-补充知识/优化师实战手册.md",
-    "CV-深度学习笔记/01-PyTorch基础-土堆/查看开源项目.md",
-    "CV-深度学习笔记/01-PyTorch基础-土堆/搭建小实战和Sequential使用.md",
-    "CV-深度学习笔记/01-PyTorch基础-土堆/非线性激活.md",
-    "CV-深度学习笔记/01-PyTorch基础-土堆/卷积层.md",
-    "投流agent/01-零基础入门/02-什么是优化师.md",
     "投流agent/04-实战项目",
     "投流agent/03-汽车Agent开发",
     "投流agent/02-汽车优化师技能",
     "投流agent/01-汽车投流入门",
-    "投流agent/07-学习路径与计划/01-学习路径图.md",
-    "投流agent/06-补充知识/投流Agent高级技术详解.md",
-    "投流agent/01-基础知识/投流Agent基础知识大全.md",
-    "投流agent/03-AI技术基础/01-大语言模型基础.md",
-    "投流agent/01-零基础入门/03-投流平台概览.md",
-    "投流agent/01-零基础入门/01-什么是投流.md",
     "投流agent/07-学习路径与计划",
     "投流agent/06-工具与资源",
-    "投流agent/05-实战案例与项目",
-    "投流agent/04-投流Agent开发",
-    "投流agent/03-AI技术基础",
-    "投流agent/06-补充知识/投流Agent案例深度分析.md",
-    "投流agent/03-优化师知识/README.md",
-    "投流agent/03-优化师知识/03-实战案例与最佳实践.md",
-    "投流agent/06-补充知识/投流Agent工具使用指南.md"
+    "投流agent/05-实战案例与项目"
   ]
 }

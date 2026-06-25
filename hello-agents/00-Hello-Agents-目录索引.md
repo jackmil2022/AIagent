@@ -1,4 +1,6 @@
 ---
+aliases:
+  - "00-目录索引"
 title: "Hello-Agents 大模型学习完全指南"
 source: "https://datawhalechina.github.io/hello-agents/"
 author: Datawhale
@@ -6,6 +8,8 @@ created: 2026-06-24
 updated: 2026-06-24
 tags: [AI, Agents, LLM, Tutorial, Complete-Guide]
 ---
+aliases:
+  - "00-目录索引"
 
 # 🤖 Hello-Agents 大模型学习完全指南
 
@@ -15,6 +19,8 @@ tags: [AI, Agents, LLM, Tutorial, Complete-Guide]
 📦 **配套代码**: [GitHub - Datawhale](https://github.com/datawhalechina/Hello-Agents)
 
 ---
+aliases:
+  - "00-目录索引"
 
 ## 🎯 学习目标
 
@@ -34,14 +40,16 @@ tags: [AI, Agents, LLM, Tutorial, Complete-Guide]
 
 | 部分 | 索引 | 内容 |
 |------|------|------|
-| 🌱 第一部分 | [[01-智能体与LLM基础/00-基础知识索引\|基础知识索引]] | Python、数学、ML、DL、NLP、Transformer |
-| 🚀 PyTorch教程 | [[06-PyTorch教程/00-PyTorch教程索引\|PyTorch教程索引]] | Tensor、模型、训练、实战 |
-| 🌿 第二部分 | [[02-构建LLM智能体/00-应用开发索引\|应用开发索引]] | Prompt、API、LangChain、Agent |
-| 🌳 第三部分 | [[03-高级知识扩展/00-高级技术索引\|高级技术索引]] | RAG、微调、RLHF、多模态、架构 |
-| 🏆 第四部分 | [[04-综合案例进阶/00-案例实战索引\|案例实战索引]] | 智能客服、旅行助手、研究Agent |
-| 🎓 第五部分 | [[05-毕业设计与展望/00-毕业设计索引\|毕业设计索引]] | 毕业设计、前沿展望、职业发展 |
+| 🌱 第一部分 | [[01-智能体与LLM基础/00-智能体与LLM基础-索引\|基础知识索引]] | Python、数学、ML、DL、NLP、Transformer |
+| 🚀 PyTorch教程 | [[06-PyTorch教程/00-PyTorch教程-索引\|PyTorch教程索引]] | Tensor、模型、训练、实战 |
+| 🌿 第二部分 | [[02-构建LLM智能体/00-构建LLM智能体-索引\|应用开发索引]] | Prompt、API、LangChain、Agent |
+| 🌳 第三部分 | [[03-高级知识扩展/00-高级知识扩展-索引\|高级技术索引]] | RAG、微调、RLHF、多模态、架构 |
+| 🏆 第四部分 | [[04-综合案例进阶/00-综合案例进阶-索引\|案例实战索引]] | 智能客服、旅行助手、研究Agent |
+| 🎓 第五部分 | [[05-毕业设计与展望/00-毕业设计与展望-索引\|毕业设计索引]] | 毕业设计、前沿展望、职业发展 |
 
 ---
+aliases:
+  - "00-目录索引"
 
 ## PyTorch 教程
 
@@ -82,6 +90,8 @@ Loss + Optimizer（训练工具）
 ```
 
 ---
+aliases:
+  - "00-目录索引"
 
 ## 第一部分：智能体与 LLM 基础
 
@@ -165,6 +175,8 @@ Loss + Optimizer（训练工具）
 | [[01-智能体与LLM基础/09-大语言模型基础\|09 - 大语言模型基础]] | Transformer、提示、主流 LLM 及其局限 | 07 | 10 |
 
 ---
+aliases:
+  - "00-目录索引"
 
 ## 第二部分：构建你的 LLM 智能体
 
@@ -219,6 +231,8 @@ Loss + Optimizer（训练工具）
 | [[02-构建LLM智能体/16-构建你的Agent框架\|16 - 构建你的 Agent 框架]] | 从零构建智能体框架，兼具"用轮子"与"造轮子"能力 | 15 | 17 |
 
 ---
+aliases:
+  - "00-目录索引"
 
 ## 第三部分：高级知识扩展
 
@@ -294,6 +308,8 @@ Loss + Optimizer（训练工具）
 | [[03-高级知识扩展/26c-Agent架构-Agent编排\|26c - Agent架构：Agent编排]] | LangGraph、CrewAI、AutoGen | 26b | 27 |
 
 ---
+aliases:
+  - "00-目录索引"
 
 ## 第四部分：综合案例进阶
 
@@ -326,6 +342,8 @@ Loss + Optimizer（训练工具）
 | [[04-综合案例进阶/30c-案例-数据分析\|30c - 案例：数据分析]] | 数据分析Agent | 29 | - |
 
 ---
+aliases:
+  - "00-目录索引"
 
 ## 第五部分：毕业设计与未来展望
 
@@ -345,6 +363,8 @@ Loss + Optimizer（训练工具）
 | [[05-毕业设计与展望/32b-展望-职业发展\|32b - 展望：职业发展]] | AI工程师学习路径、面试准备 | 32a | - |
 
 ---
+aliases:
+  - "00-目录索引"
 
 ## 📚 附录
 
@@ -365,6 +385,8 @@ Loss + Optimizer（训练工具）
 | Datawhale开源社区 | [datawhale.cn](https://datawhale.cn/) |
 
 ---
+aliases:
+  - "00-目录索引"
 
 ## 🎯 知识点关联图
 
@@ -411,6 +433,8 @@ NLP基础 → 序列模型 → 注意力机制
 ```
 
 ---
+aliases:
+  - "00-目录索引"
 
 ## 📊 内容统计
 
@@ -424,6 +448,8 @@ NLP基础 → 序列模型 → 注意力机制
 | **总计** | **68章** | **10-15周** |
 
 ---
+aliases:
+  - "00-目录索引"
 
 > 🐳 **Datawhale** - 一个专注于 AI 领域的开源学习社区
 > 📝 **最后更新**: 2026-06-24

@@ -1,14 +1,20 @@
 ---
+aliases:
+  - "00-PyTorch教程索引"
 title: "PyTorch教程索引"
 description: "从零开始学习PyTorch深度学习框架"
 tags: [PyTorch, Deep-Learning, Index, Tutorial]
 ---
+aliases:
+  - "00-PyTorch教程索引"
 
 # 🚀 PyTorch教程索引
 
 > **从零开始，一步步掌握PyTorch**
 
 ---
+aliases:
+  - "00-PyTorch教程索引"
 
 ## 📝 关于本教程
 
@@ -20,6 +26,8 @@ tags: [PyTorch, Deep-Learning, Index, Tutorial]
 - ✅ **实战导向** — 最终能独立训练模型
 
 ---
+aliases:
+  - "00-PyTorch教程索引"
 
 ## 📚 学习路径
 
@@ -40,6 +48,8 @@ Tensor基础（积木）
 ```
 
 ---
+aliases:
+  - "00-PyTorch教程索引"
 
 ## 🗂️ 教程目录
 
@@ -75,6 +85,8 @@ Tensor基础（积木）
 | [[11-PyTorch实战-迁移学习]] | 站在巨人肩膀上 | 1.5小时 |
 
 ---
+aliases:
+  - "00-PyTorch教程索引"
 
 ## 🎯 学习建议
 
@@ -92,6 +104,8 @@ Tensor基础（积木）
 3. **画图辅助** — 用TensorBoard可视化
 
 ---
+aliases:
+  - "00-PyTorch教程索引"
 
 ## 🛠️ 环境准备
 
@@ -120,6 +134,8 @@ print(f"Tensor形状: {x.shape}")
 ```
 
 ---
+aliases:
+  - "00-PyTorch教程索引"
 
 ## 📖 参考资源
 
@@ -129,6 +145,8 @@ print(f"Tensor形状: {x.shape}")
 - [PyTorch中文文档](https://pytorch.apachecn.org/)
 
 ---
+aliases:
+  - "00-PyTorch教程索引"
 
 ## 🎯 下一步
 
@@ -136,5 +154,7 @@ print(f"Tensor形状: {x.shape}")
 - 建议按照目录顺序逐步学习
 
 ---
+aliases:
+  - "00-PyTorch教程索引"
 
 > 💡 **记住**：深度学习没有捷径，但有方法。跟着教程一步步来，你一定能学会！

@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "预训练模型：从BERT到GPT"
 description: "理解预训练语言模型的演进"
 tags: [Pre-training, BERT, GPT, Language-Model]

@@ -1,4 +1,5 @@
 ---
+module: "CV-深度学习笔记"
 title: "课程5 第1周 循环神经网络RNN"
 tags: [CV, Deep-Learning, PyTorch]
 ---

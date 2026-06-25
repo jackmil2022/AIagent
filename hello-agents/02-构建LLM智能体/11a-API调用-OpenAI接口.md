@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "API调用：OpenAI接口"
 description: "掌握OpenAI API的使用方法"
 tags: [API, OpenAI, GPT, Integration]

@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "RLHF：DPO与GRPO"
 description: "人类反馈强化学习的新方法"
 tags: [RLHF, DPO, GRPO, Alignment]

@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "全连接卷积神经网络FCN"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, CNN, 卷积]
 ---
 
 # 全连接卷积神经网络FCN

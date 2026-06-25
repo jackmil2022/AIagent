@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "torchvision数据集使用"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 数据集]
 ---
 
 # torchvision数据集使用

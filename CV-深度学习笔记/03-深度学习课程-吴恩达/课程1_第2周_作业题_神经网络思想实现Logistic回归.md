@@ -1,4 +1,5 @@
 ---
+module: "CV-深度学习笔记"
 title: "课程1 第2周 作业题 神经网络思想实现Logistic回归"
 tags: [CV, Deep-Learning, PyTorch]
 ---

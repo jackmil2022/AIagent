@@ -1,4 +1,5 @@
 ---
+module: "CV-深度学习笔记"
 title: "使用LangChain构建RAG"
 tags: [CV, Deep-Learning, PyTorch]
 ---

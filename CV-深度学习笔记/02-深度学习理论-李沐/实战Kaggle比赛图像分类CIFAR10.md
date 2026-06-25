@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "实战Kaggle比赛图像分类CIFAR10"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 实战]
 ---
 
 # 实战Kaggle比赛图像分类CIFAR10

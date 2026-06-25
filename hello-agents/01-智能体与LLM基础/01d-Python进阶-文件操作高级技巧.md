@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "Python进阶：文件操作高级技巧"
 description: "pathlib、上下文管理器、异步IO、临时文件等进阶技巧"
 tags: [Python, Advanced, File-IO, pathlib, ContextManager, AsyncIO]

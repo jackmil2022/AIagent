@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "PyTorch优化器详解"
 description: "理解各种优化器的原理和选择"
 tags: [PyTorch, Optimizer, SGD, Adam, Training]

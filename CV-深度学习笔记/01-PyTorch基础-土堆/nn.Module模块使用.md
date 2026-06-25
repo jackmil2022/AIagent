@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "nn.Module模块使用"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 神经网络]
 ---
 
 # nn.Module模块使用

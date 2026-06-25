@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "使用块的网络VGG"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 经典网络, CNN]
 ---
 
 # 使用块的网络VGG

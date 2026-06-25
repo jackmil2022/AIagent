@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "Transformer"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, Transformer]
 ---
 
 # Transformer

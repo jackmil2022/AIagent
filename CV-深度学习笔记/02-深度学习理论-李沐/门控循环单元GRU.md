@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "门控循环单元GRU"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, GRU, 序列模型]
 ---
 
 # 门控循环单元GRU

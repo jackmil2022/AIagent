@@ -1,3 +1,9 @@
+---
+title: "第十三章：Prompting 情感分析"
+module: "Transformers快速入门"
+tags: [Transformers, HuggingFace, NLP]
+---
+
 # 第十三章：Prompting 情感分析
 
 > 来源：https://transformers.run/c3/2022-10-10-transformers-note-10/

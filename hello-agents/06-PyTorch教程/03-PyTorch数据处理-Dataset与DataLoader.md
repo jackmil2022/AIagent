@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "PyTorch数据处理：Dataset与DataLoader"
 description: "学习如何加载、处理和批量提供数据给模型"
 tags: [PyTorch, Dataset, DataLoader, Data]

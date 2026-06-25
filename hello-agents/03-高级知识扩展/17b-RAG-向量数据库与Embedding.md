@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "RAG：向量数据库与Embedding"
 description: "深入理解向量检索技术"
 tags: [Vector-Database, Embedding, RAG, Retrieval]

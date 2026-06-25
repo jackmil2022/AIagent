@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "SSD实现"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 目标检测]
 ---
 
 # SSD实现

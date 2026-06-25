@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "Agent架构：Agent编排"
 description: "使用框架构建复杂Agent系统"
 tags: [Agent, Orchestration, LangGraph, CrewAI]

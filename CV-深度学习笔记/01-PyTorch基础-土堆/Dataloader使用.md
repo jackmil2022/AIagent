@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "Dataloader使用"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 数据加载]
 ---
 
 # Dataloader使用

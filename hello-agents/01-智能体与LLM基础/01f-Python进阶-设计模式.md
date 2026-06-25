@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "Python进阶：设计模式"
 description: "单例、工厂、观察者、策略、装饰器、代理等常用设计模式"
 tags: [Python, Advanced, Design-Patterns, OOP]

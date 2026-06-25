@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "PyTorch实战：迁移学习"
 description: "站在巨人肩膀上，用预训练模型快速解决问题"
 tags: [PyTorch, Transfer-Learning, Fine-tune, Pre-trained]

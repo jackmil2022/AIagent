@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "Agent架构：单体Agent"
 description: "理解单体Agent的设计模式与实现"
 tags: [Agent, Architecture, ReAct, Plan-Execute]

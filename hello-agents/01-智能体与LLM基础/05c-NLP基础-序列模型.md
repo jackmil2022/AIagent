@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "NLP基础：序列模型"
 description: "RNN、LSTM、GRU详解"
 tags: [NLP, RNN, LSTM, GRU, Sequence]

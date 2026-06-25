@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "Transformer：架构详解"
 description: "深入理解Transformer的核心架构"
 tags: [Transformer, Attention, BERT, GPT]

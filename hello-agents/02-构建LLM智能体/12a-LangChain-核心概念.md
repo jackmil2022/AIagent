@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "LangChain：核心概念"
 description: "LangChain框架的核心组件"
 tags: [LangChain, Framework, Chain, Agent]

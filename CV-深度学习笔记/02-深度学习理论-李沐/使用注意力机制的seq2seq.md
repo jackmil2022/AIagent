@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "使用注意力机制的seq2seq"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 注意力机制, Transformer]
 ---
 
 # 使用注意力机制的seq2seq

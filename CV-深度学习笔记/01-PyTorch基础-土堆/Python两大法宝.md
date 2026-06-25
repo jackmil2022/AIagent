@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "Python两大法宝"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, Python基础]
 ---
 
 # Python两大法宝

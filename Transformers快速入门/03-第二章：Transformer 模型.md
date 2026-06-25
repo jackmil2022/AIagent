@@ -1,3 +1,9 @@
+---
+title: "第二章：Transformer 模型"
+module: "Transformers快速入门"
+tags: [Transformers, HuggingFace, NLP]
+---
+
 # 第二章：Transformer 模型
 
 > 来源：https://transformers.run/c1/transformer/

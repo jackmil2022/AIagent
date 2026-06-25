@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "深度卷积神经网络AlexNet"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, CNN, 卷积]
 ---
 
 # 深度卷积神经网络AlexNet

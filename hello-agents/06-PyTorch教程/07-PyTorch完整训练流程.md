@@ -1,4 +1,5 @@
 ---
+module: "hello-agents"
 title: "PyTorch完整训练流程"
 description: "从数据到模型，完整的训练流程模板"
 tags: [PyTorch, Training, Workflow, Complete]

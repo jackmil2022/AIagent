@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "PyTorch神经网络基础"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 深度学习理论]
 ---
 
 # PyTorch神经网络基础

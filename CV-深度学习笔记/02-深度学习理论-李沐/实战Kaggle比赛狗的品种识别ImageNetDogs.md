@@ -1,6 +1,7 @@
 ---
+module: "CV-深度学习笔记"
 title: "实战Kaggle比赛狗的品种识别ImageNetDogs"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [CV, Deep-Learning, PyTorch, 实战]
 ---
 
 # 实战Kaggle比赛狗的品种识别ImageNetDogs
