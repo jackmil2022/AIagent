@@ -80,6 +80,14 @@
   },
   "savedSessions": [
     {
+      "sessionId": "014bdda4-0eb5-4178-8b8c-09887189e87d",
+      "agentId": "claude-code-acp",
+      "cwd": "/Users/yin/PycharmProjects/AIagent",
+      "title": "npm install -g @agentclientprotocol/claude-agent-a...",
+      "createdAt": "2026-06-25T01:32:51.471Z",
+      "updatedAt": "2026-06-25T01:32:51.471Z"
+    },
+    {
       "sessionId": "febb95f3-46c0-4331-9442-abf0ddf3381b",
       "agentId": "claude-code-acp",
       "cwd": "/Users/yin/PycharmProjects/AIagent",

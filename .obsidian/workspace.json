@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e5be4ab7254415f4",
+        "id": "ae73c344f8fc3916",
         "type": "tabs",
         "children": [
           {
-            "id": "8ca24044d8876464",
+            "id": "828c0d176c6d9b2b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CV-深度学习笔记/03-深度学习课程-吴恩达/课程1_第1周_测验题.md",
-                "mode": "source",
+                "file": "CV-深度学习笔记/03-深度学习课程-吴恩达/课程1_第1周_深度学习概述.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "课程1_第1周_测验题"
+              "title": "课程1_第1周_深度学习概述"
             }
           }
         ]
@@ -211,6 +211,20 @@
   "active": "b527c8e5f7966fe5",
   "lastOpenFiles": [
     "CV-深度学习笔记/03-深度学习课程-吴恩达/课程1_第1周_深度学习概述.md",
+    "CV-深度学习笔记/03-深度学习课程-吴恩达/课程1_第1周_作业题_numpy构建基本函数.md",
+    "assets/q1q6u68rot.gif",
+    "assets/q1q2blbfn.gif",
+    "assets/q1q1pdeatw.gif",
+    "assets/%E4%B8%8B%E8%BD%BD.gif",
+    "assets/v2-4959201e816888c6648f2e78cccfd253_720w.gif",
+    "assets/20200825171851456.gif",
+    "assets/20200825170148125.gif",
+    "assets/20200825170643804.gif",
+    "assets/20200825171135738.gif",
+    "assets/20190305160149865.gif",
+    "CV-深度学习笔记/03-深度学习课程-吴恩达/课程1_第4周_深层神经网络.md",
+    "assets",
+    "CV-深度学习笔记/03-深度学习课程-吴恩达/课程1_第1周_测验题.md",
     "INDEX.md",
     "00-AIagent项目总览.base",
     "00-AIagent项目总索引.md",
@@ -233,18 +247,13 @@
     "投流agent/03-优化师知识/02-优化师实用工具与资源.md",
     "投流agent/03-优化师知识/01-优化师基础知识-定义分类与核心技能.md",
     "投流agent/01-汽车投流入门/03-汽车投放平台-抖音微信百度.md",
-    "投流agent/01-汽车投流入门/02-汽车优化师角色-岗位职责与技能.md",
-    "投流agent/01-汽车投流入门/01-汽车投流概述-投流概念与核心指标.md",
     "AIagent项目总览.base",
-    "投流agent/05-知识库/汽车投流研究报告.md",
-    "投流agent/01-汽车投流入门/01-汽车投流概述.md",
     "投流agent/05-知识库",
     "投流agent/04-实战项目",
     "投流agent/03-汽车Agent开发",
     "投流agent/02-汽车优化师技能",
     "投流agent/01-汽车投流入门",
     "投流agent/07-学习路径与计划",
-    "投流agent/06-工具与资源",
-    "投流agent/05-实战案例与项目"
+    "投流agent/06-工具与资源"
   ]
 }
