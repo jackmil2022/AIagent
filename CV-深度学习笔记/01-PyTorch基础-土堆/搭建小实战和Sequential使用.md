@@ -145,7 +145,6 @@ print(output.shape)
 
 ```
 torch.Size([64, 10])
-
 ```
 
 # 4. Tensorboard显示网络
@@ -195,7 +194,6 @@ writer.close()
 ```
 Files already downloaded and verified
 torch.Size([64, 10])
-
 ```
 
 ① 在 Anaconda 终端里面，激活py3.6.3环境，再输入 tensorboard --logdir=C:\Users\wangy\Desktop\03CV\logs 命令，将网址赋值浏览器的网址栏，回车，即可查看tensorboard显示日志情况。

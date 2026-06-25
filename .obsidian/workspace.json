@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "71c95c6c143e1a0b",
+        "id": "a7d27dcf540f57b1",
         "type": "tabs",
         "children": [
           {
-            "id": "13afffa6b6c64f79",
+            "id": "258e9eb40cf24a60",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
+                "file": "CV-深度学习笔记/02-深度学习理论-李沐/池化层.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: workspace.json  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "池化层"
             }
           }
         ]
@@ -208,8 +208,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "13afffa6b6c64f79",
+  "active": "258e9eb40cf24a60",
   "lastOpenFiles": [
+    "CV-深度学习笔记/02-深度学习理论-李沐/残差神经网络ResNet.md",
+    "CV-深度学习笔记/02-深度学习理论-李沐/编码器解码器架构.md",
+    "CV-深度学习笔记/01-PyTorch基础-土堆/利用GPU训练.md",
+    "CV-深度学习笔记/01-PyTorch基础-土堆/卷积层.md",
+    "CV-深度学习笔记/01-PyTorch基础-土堆/非线性激活.md",
+    "CV-深度学习笔记/01-PyTorch基础-土堆/搭建小实战和Sequential使用.md",
+    "CV-深度学习笔记/01-PyTorch基础-土堆/查看开源项目.md",
     "CV-深度学习笔记/03-深度学习课程-吴恩达/课程1_第1周_作业题_numpy构建基本函数.md",
     "CV-深度学习笔记/03-深度学习课程-吴恩达/课程1_第1周_深度学习概述.md",
     "assets/q1q6u68rot.gif",
@@ -241,12 +248,6 @@
     "hello-agents/00-Hello-Agents-目录索引.md",
     "投流agent/投流Agent行业趋势分析.md",
     "投流agent/00-投流Agent项目说明.md",
-    "投流agent/05-知识库/汽车投流研究报告-从入门到精通.md",
-    "投流agent/03-优化师知识/00-优化师知识体系概览.md",
-    "投流agent/03-优化师知识/03-优化师实战案例与最佳实践.md",
-    "投流agent/03-优化师知识/02-优化师实用工具与资源.md",
-    "投流agent/03-优化师知识/01-优化师基础知识-定义分类与核心技能.md",
-    "投流agent/01-汽车投流入门/03-汽车投放平台-抖音微信百度.md",
     "AIagent项目总览.base",
     "投流agent/05-知识库",
     "投流agent/04-实战项目",
