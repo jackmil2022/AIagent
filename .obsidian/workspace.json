@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CV-深度学习笔记/02-深度学习理论-李沐/池化层.md",
+                "file": "CV-深度学习笔记/02-深度学习理论-李沐/树叶分类竞赛技术总结.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "池化层"
+              "title": "树叶分类竞赛技术总结"
             }
           }
         ]
@@ -208,10 +208,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "258e9eb40cf24a60",
+  "active": "b527c8e5f7966fe5",
   "lastOpenFiles": [
+    "CV-深度学习笔记/02-深度学习理论-李沐/权重衰退.md",
+    "CV-深度学习笔记/02-深度学习理论-李沐/丢弃法.md",
+    "CV-深度学习笔记/02-深度学习理论-李沐/多层感知机.md",
+    "CV-深度学习笔记/02-深度学习理论-李沐/池化层.md",
     "CV-深度学习笔记/02-深度学习理论-李沐/残差神经网络ResNet.md",
     "CV-深度学习笔记/02-深度学习理论-李沐/编码器解码器架构.md",
+    "CV-深度学习笔记/02-深度学习理论-李沐/锚框.md",
+    "CV-深度学习笔记/02-深度学习理论-李沐/门控循环单元GRU.md",
+    "CV-深度学习笔记/02-深度学习理论-李沐/卷积层.md",
+    "CV-深度学习笔记/02-深度学习理论-李沐/矩阵计算.md",
+    "CV-深度学习笔记/02-深度学习理论-李沐/合并行连接的网络GoogLeNet.md",
+    "CV-深度学习笔记/02-深度学习理论-李沐/分布式训练.md",
+    "CV-深度学习笔记/02-深度学习理论-李沐/机器翻译数据集.md",
+    "CV-深度学习笔记/02-深度学习理论-李沐/多GPU训练实现.md",
     "CV-深度学习笔记/01-PyTorch基础-土堆/利用GPU训练.md",
     "CV-深度学习笔记/01-PyTorch基础-土堆/卷积层.md",
     "CV-深度学习笔记/01-PyTorch基础-土堆/非线性激活.md",
@@ -236,18 +248,6 @@
     "00-AIagent项目总览.base",
     "00-AIagent项目总索引.md",
     "CV-深度学习笔记/00-CV深度学习笔记-目录索引.md",
-    "CV-深度学习笔记/00-CV深度学习笔记-项目说明.md",
-    "Transformers快速入门/00-Transformers快速入门-目录索引.md",
-    "hello-agents/06-PyTorch教程/00-PyTorch教程-索引.md",
-    "hello-agents/05-毕业设计与展望/00-毕业设计与展望-索引.md",
-    "hello-agents/04-综合案例进阶/00-综合案例进阶-索引.md",
-    "hello-agents/03-高级知识扩展/00-高级知识扩展-索引.md",
-    "hello-agents/02-构建LLM智能体/00-构建LLM智能体-索引.md",
-    "hello-agents/01-智能体与LLM基础/00-智能体与LLM基础-索引.md",
-    "hello-agents/00-Hello-Agents-前言.md",
-    "hello-agents/00-Hello-Agents-目录索引.md",
-    "投流agent/投流Agent行业趋势分析.md",
-    "投流agent/00-投流Agent项目说明.md",
     "AIagent项目总览.base",
     "投流agent/05-知识库",
     "投流agent/04-实战项目",

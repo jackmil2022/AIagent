@@ -8,6 +8,27 @@ tags: [CV, Deep-Learning, PyTorch, Transformer]
 
 # 1. Transformer
 
+① **Transformer** 是 2017 年 Google 提出的模型（"Attention Is All You Need"），彻底改变了 NLP 领域。
+
+② 核心创新：**自注意力机制（Self-Attention）**，完全抛弃了 RNN/CNN 的序列依赖。
+
+③ 核心组件：
+- **多头自注意力（Multi-Head Self-Attention）**：让每个位置关注序列中所有其他位置
+- **位置编码（Positional Encoding）**：为输入添加位置信息（因为没有循环结构）
+- **前馈网络（FFN）**：每个位置独立的全连接层
+- **残差连接 + 层归一化**：稳定训练
+
+④ **编码器-解码器架构**：
+- **编码器**：将输入序列编码为上下文表示
+- **解码器**：基于编码器输出，自回归生成目标序列
+
+⑤ Transformer 的优势：
+- 并行计算效率远高于 RNN
+- 能捕捉长距离依赖
+- 可扩展性好，适合大规模预训练
+
+⑥ 基于 Transformer 的著名模型：BERT、GPT、T5、ViT 等。
+
 
 
 
