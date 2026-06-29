@@ -26,28 +26,16 @@ tags: [Transformers, HuggingFace, NLP]
 
 语料已经划分好了训练集、验证集、测试集（分别包含 9600、1200、1200 条评论），一行是一个样本，使用 `TAB` 分隔评论和对应的标签，“0”表示消极，“1”表示积极。例如：
 
-<div class="language-plaintext highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```
 选择珠江花园的原因就是方便，有电动扶梯直接到达海边，周围餐馆、食廊、商场、超市、摊位一应俱全。酒店装修一般，但还算整洁。 泳池在大堂的屋顶，因此很小，不过女儿倒是喜欢。 包的早餐是西式的，还算丰富。 服务吗，一般    1
 ...
 ```
-
-</div>
-
-</div>
 
 ### 构建数据集
 
 与之前一样，我们首先编写继承自 `Dataset` 类的自定义数据集用于组织样本和标签。
 
-<div class="language-python highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```python
 from torch.utils.data import Dataset
 
 class ChnSentiCorp(Dataset):
@@ -77,32 +65,16 @@ valid_data = ChnSentiCorp('data/ChnSentiCorp/dev.txt')
 test_data = ChnSentiCorp('data/ChnSentiCorp/test.txt')
 ```
 
-</div>
-
-</div>
-
 下面我们输出数据集的尺寸，并且打印出一个训练样本：
 
-<div class="language-python highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```python
 print(f'train set size: {len(train_data)}')
 print(f'valid set size: {len(valid_data)}')
 print(f'test set size: {len(test_data)}')
 print(next(iter(train_data)))
 ```
 
-</div>
-
-</div>
-
-<div class="language-plaintext highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```
 train set size: 9600
 valid set size: 1200
 test set size: 1200
@@ -111,10 +83,6 @@ test set size: 1200
     'label': '1'
 }
 ```
-
-</div>
-
-</div>
 
 最常见的 Prompting 方法就是借助模板将问题转换为 MLM 任务来解决。这里我们定义模板形式为“总体上来说很 $\\texttt{\[MASK\]}$。${x}$”，其中 $x$ 表示评论文本，并且规定如果 $\\texttt{\[MASK\]}$ 被预测为“好”就判定情感为“积极”，如果预测为“差”就判定为“消极”，即“积极”和“消极”标签对应的 label word 分别为“好”和“差”。
 
@@ -125,11 +93,7 @@ test set size: 1200
 
 下面我们首先编写模板和 verbalizer 对应的函数：
 
-<div class="language-python highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```python
 def get_prompt(x):
     prompt = f'总体上来说很[MASK]。{x}'
     return {
@@ -144,17 +108,9 @@ def get_verbalizer(tokenizer):
     }
 ```
 
-</div>
-
-</div>
-
 这里由于模板中只包含一个 $\\texttt{\[MASK\]}$ token，因此我们直接通过 `str.find()` 函数获取其位置，如果模板中包含多个 $\\texttt{\[MASK\]}$ token，就需要把他们的位置都记录下来。verbalizer 记录了从标签到对应 label word 的映射，这里我们通过 `tokenizer.convert_tokens_to_ids()` 来获取 label word 对应的 token ID。例如，第一个样本转换后的模板为：
 
-<div class="language-python highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```python
 from transformers import AutoTokenizer
 
 checkpoint = "bert-base-chinese"
@@ -176,24 +132,12 @@ print('prompt tokens:', tokens)
 print('mask idx:', mask_idx)
 ```
 
-</div>
-
-</div>
-
-<div class="language-plaintext highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```
 verbalizer: {'pos': {'token': '好', 'id': 1962}, 'neg': {'token': '差', 'id': 2345}}
 prompt: 总体上来说很[MASK]。这个宾馆比较陈旧了，特价的房间也很一般。总体来说一般。
 prompt tokens: ['[CLS]', '总', '体', '上', '来', '说', '很', '[MASK]', '。', '这', '个', '宾', '馆', '比', '较', '陈', '旧', '了', '，', '特', '价', '的', '房', '间', '也', '很', '一', '般', '。', '总', '体', '来', '说', '一', '般', '。', '[SEP]']
 mask idx: 7
 ```
-
-</div>
-
-</div>
 
 可以看到，BERT 分词器正确地将“\[MASK\]”识别为一个 token，并且记录下 $\\texttt{\[MASK\]}$ token 在序列中的索引。
 
@@ -201,11 +145,7 @@ mask idx: 7
 
 例如，这里我们可以为“积极”和“消极”构建专门的虚拟 token “\[POS\]”和“\[NEG\]”，并且设置对应的类别描述为“好的、优秀的、正面的评价、积极的态度”和“差的、糟糕的、负面的评价、消极的态度”。下面我们扩展一下上面的 verbalizer 函数，添加一个 `vtype` 参数来区分两种 verbalizer 类型：
 
-<div class="language-python highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```python
 def get_verbalizer(tokenizer, vtype):
     assert vtype in ['base', 'virtual']
     return {
@@ -229,34 +169,18 @@ if vtype == 'virtual':
 print('verbalizer:', get_verbalizer(tokenizer, vtype=vtype))
 ```
 
-</div>
-
-</div>
-
-<div class="language-plaintext highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```
 verbalizer: {
     'pos': {'token': '[POS]', 'id': 21128, 'description': '好的、优秀的、正面的评价、积极的态度'}, 
     'neg': {'token': '[NEG]', 'id': 21129, 'description': '差的、糟糕的、负面的评价、消极的态度'}
 }
 ```
 
-</div>
-
-</div>
-
 **注意：**“\[POS\]”和“\[NEG\]”是我们新添加的 token，因此如[模型与分词器](https://transformers.run/intro/2021-12-11-transformers-note-2/)中介绍的那样，我们首先需要通过 `tokenizer.add_special_tokens()` 将这两个 token 添加进模型的词表，然后才能获取它们的 token ID。
 
 Prompting 方法实际输入的是转换后的模板，而不是原始文本，因此我们首先使用模板函数 `get_prompt()` 来更新数据集：
 
-<div class="language-python highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```python
 class ChnSentiCorp(Dataset):
     def __init__(self, data_file):
         self.data = self.load_data(data_file)
@@ -283,19 +207,11 @@ class ChnSentiCorp(Dataset):
         return self.data[idx]
 ```
 
-</div>
-
-</div>
-
 > 在实际应用场景下，模板的转换过程可能比文本中的要复杂得多（可能非常耗时），因此这里我们将其放置于数据集函数而不是 DataLoader 中，使得数据集返回的就是转换后的样本。
 
 同样地，我们通过 `print(next(iter(train_data)))` 打印出一个训练样本：
 
-<div class="language-plaintext highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```
 {
     'comment': '选择珠江花园的原因就是方便，有电动扶梯直接到达海边，周围餐馆、食廊、商场、超市、摊位一应俱全。酒店装修一般，但还算整洁。 泳池在大堂的屋顶，因此很小，不过女儿倒是喜欢。 包的早餐是西式的，还算丰富。 服务吗，一般', 
     'prompt': '总体上来说很[MASK]。选择珠江花园的原因就是方便，有电动扶梯直接到达海边，周围餐馆、食廊、商场、超市、摊位一应俱全。酒店装修一般，但还算整洁。 泳池在大堂的屋顶，因此很小，不过女儿倒是喜欢。 包的早餐是西式的，还算丰富。 服务吗，一般', 
@@ -304,21 +220,13 @@ class ChnSentiCorp(Dataset):
 }
 ```
 
-</div>
-
-</div>
-
 可以看到输出的是转换后的模板，并且标记出了 $\\texttt{\[MASK\]}$ 在文本中的位置，符合我们的预期。
 
 ### 数据预处理
 
 与之前一样，接下来我们就通过 `DataLoader` 库来按批(batch)加载数据，将文本转换为模型可以接受的 token IDs。
 
-<div class="language-python highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```python
 import torch
 from torch.utils.data import DataLoader
 from transformers import AutoTokenizer
@@ -368,15 +276,7 @@ print(batch_data['label_word_id'])
 print(batch_data['labels'])
 ```
 
-</div>
-
-</div>
-
-<div class="language-plaintext highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```
 batch_X shape: {
     'input_ids': torch.Size([4, 201]), 
     'token_type_ids': torch.Size([4, 201]), 
@@ -401,10 +301,6 @@ batch_X shape: {
 [0, 1, 1, 1]
 ```
 
-</div>
-
-</div>
-
 可以看到，DataLoader 按照我们设置的 batch size 每次对 4 个样本进行编码，将 token 序列填充到了相同的长度。这里由于我们对所有样本都添加相同的“前缀”，因此 `[MASK]` token 的索引都为 7。
 
 > 这里我们设置 verbalizer 为普通类型，因此 `label_word_id` 为 `[2345, 1962]`，分别是“差”和“好”对应的 token ID。你也可以通过设置 `vtype = 'virtual'` 获取虚拟 token 类型的 verbalizer，此时模板不会有变化，但是 `label_word_id` 会变为 `[21129, 21128]`，分别对应我们添加的“\[NEG\]”和“\[POS\]” token。
@@ -415,11 +311,7 @@ batch_X shape: {
 
 对于 MLM 任务，可以直接使用 Transformers 库封装好的 `AutoModelForMaskedLM` 类。由于 BERT 已经在 MLM 任务上进行了预训练，因此借助模板我们甚至可以在不微调的情况下 (Zero-shot) 直接使用模型来预测情感极性。例如对我们的第一个样本：
 
-<div class="language-python highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```python
 import torch
 from transformers import AutoModelForMaskedLM
 
@@ -439,15 +331,7 @@ for token in top_5_tokens:
     print(f"'>>> {text.replace(tokenizer.mask_token, tokenizer.decode([token]))}'")
 ```
 
-</div>
-
-</div>
-
-<div class="language-plaintext highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```
 '>>> 总体上来说很好。这个宾馆比较陈旧了，特价的房间也很一般。总体来说一般。'
 '>>> 总体上来说很棒。这个宾馆比较陈旧了，特价的房间也很一般。总体来说一般。'
 '>>> 总体上来说很差。这个宾馆比较陈旧了，特价的房间也很一般。总体来说一般。'
@@ -455,19 +339,11 @@ for token in top_5_tokens:
 '>>> 总体上来说很赞。这个宾馆比较陈旧了，特价的房间也很一般。总体来说一般。'
 ```
 
-</div>
-
-</div>
-
 可以看到，BERT 模型成功地将 `[MASK]` token 预测成了我们预期的表意词“好”。这里我们还打印出了其他几个大概率的预测词，大部分都具有积极的情感（“好”、“棒”、“赞”）。
 
 当然，这种方式不够灵活，因此像之前章节中一样，本文采用继承 Transformers 库预训练模型的方式来手工构建模型：
 
-<div class="language-python highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```python
 from torch import nn
 from transformers.activations import ACT2FN
 from transformers import AutoConfig
@@ -567,15 +443,7 @@ if vtype == 'virtual':
 print(model)
 ```
 
-</div>
-
-</div>
-
-<div class="language-plaintext highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```
 Using cpu device
 initialize embeddings of [POS] and [NEG]
 BertForPrompt(
@@ -592,10 +460,6 @@ BertForPrompt(
   )
 )
 ```
-
-</div>
-
-</div>
 
 这里为了能够加载预训练好的 MLM head 参数，我们按照 Transformers 库中的模型结构来构建 `BertForPrompt` 模型。可以看到，BERT 自带的 MLM head 由两个部分组成：首先对所有 token 进行一个 $768 \\times 768$ 的非线性映射（包括激活函数和 LayerNorm），然后使用一个 $768\\times 21128$ 的线性映射预测词表中每个 token 的分数。
 
@@ -624,11 +488,7 @@ BertForPrompt(
 
 为了测试模型的操作是否符合预期，我们尝试将一个 batch 的数据送入模型：
 
-<div class="language-python highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```python
 def to_device(batch_data):
     new_batch_data = {}
     for k, v in batch_data.items():
@@ -648,21 +508,9 @@ _, outputs = model(**batch_data)
 print(outputs.shape)
 ```
 
-</div>
-
-</div>
-
-<div class="language-plaintext highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```
 torch.Size([4, 2])
 ```
-
-</div>
-
-</div>
 
 模型对每个样本都应该输出“消极”和“积极”两个类别对应 label word 的预测 logits 值，因此这里模型的输出尺寸 $4×2$ 符合预期。
 
@@ -672,11 +520,7 @@ torch.Size([4, 2])
 
 因为对标签词的预测实际上就是对类别的预测，所以这里模型的输出与[同义句判断任务](https://transformers.run/intro/2021-12-17-transformers-note-4/)中介绍过的普通文本分类模型完全一致，损失也同样是通过在类别预测和答案标签之间计算交叉熵：
 
-<div class="language-python highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```python
 from tqdm.auto import tqdm
 
 def train_loop(dataloader, model, optimizer, lr_scheduler, epoch, total_loss):
@@ -701,19 +545,11 @@ def train_loop(dataloader, model, optimizer, lr_scheduler, epoch, total_loss):
     return total_loss
 ```
 
-</div>
-
-</div>
-
 验证/测试循环负责评估模型的性能。对于分类任务最常见的就是通过精确率、召回率、F1值 (P / R / F1) 指标来评估每个类别的预测性能，然后再通过宏/微 F1 值 (Macro-F1/Micro-F1) 来评估整体分类性能。
 
 这里我们借助机器学习包 [sklearn](https://scikit-learn.org/stable/#) 提供的 `classification_report` 函数来输出这些指标，例如：
 
-<div class="language-python highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```python
 from sklearn.metrics import classification_report
 
 y_true = [1, 1, 0, 1, 2, 1, 0, 2, 1, 1, 0, 1, 0]
@@ -722,15 +558,7 @@ y_pred = [1, 0, 0, 1, 2, 0, 1, 1, 1, 0, 0, 1, 0]
 print(classification_report(y_true, y_pred, output_dict=False))
 ```
 
-</div>
-
-</div>
-
-<div class="language-plaintext highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```
               precision    recall  f1-score   support
 
            0       0.50      0.75      0.60         4
@@ -742,17 +570,9 @@ print(classification_report(y_true, y_pred, output_dict=False))
 weighted avg       0.67      0.62      0.62        13
 ```
 
-</div>
-
-</div>
-
 因此在验证/测试循环中，我们只需要汇总模型对所有样本的预测结果和答案标签，然后送入到 `classification_report` 中计算各项分类指标：
 
-<div class="language-python highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```python
 from sklearn.metrics import classification_report
 
 def test_loop(dataloader, model):
@@ -774,21 +594,13 @@ def test_loop(dataloader, model):
     return metrics
 ```
 
-</div>
-
-</div>
-
 为了方便后续保存验证集上最好的模型，这里我们还返回了评估结果。
 
 ### 保存模型
 
 与之前一样，我们会根据模型在验证集上的性能来调整超参数以及选出最好的模型权重，然后将选出的模型应用于测试集以评估最终的性能。这里我们继续使用 AdamW 优化器，并且通过 `get_scheduler()` 函数定义学习率调度器：
 
-<div class="language-python highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```python
 from transformers import AdamW, get_scheduler
 
 learning_rate = 1e-5
@@ -820,40 +632,20 @@ for epoch in range(epoch_num):
 print("Done!")
 ```
 
-</div>
-
-</div>
-
 在开始训练之前，我们先评估一下没有微调的 BERT 模型在测试集上的性能。
 
-<div class="language-python highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```python
 test_data = ChnSentiCorp('data/ChnSentiCorp/test.txt')
 test_dataloader = DataLoader(test_data, batch_size=4, shuffle=False, collate_fn=collote_fn)
 
 test_loop(test_dataloader, model)
 ```
 
-</div>
-
-</div>
-
-<div class="language-plaintext highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```
 100%|█████████████████████████████████| 300/300 [01:46<00:00,  2.82it/s]
 pos: 53.05 / 100.00 / 69.33, neg: 100.00 / 9.12 / 16.72
 Macro-F1: 43.02 Micro-F1: 43.37
 ```
-
-</div>
-
-</div>
 
 可以看到，得益于 Prompt 方法，不经微调的 BERT 模型也已经具有初步的情感分析能力，在测试集上的 Macro-F1 和 Micro-F1 值分别为 43.02 和 43.37。有趣的是，“积极”类别的召回率和“消极”类别的准确率都为 100%，这说明 BERT 对大部分样本都倾向于判断为“积极”类（可能预训练时看到的积极性文本更多吧）。
 
@@ -863,11 +655,7 @@ Macro-F1: 43.02 Micro-F1: 43.37
 
 下面，我们正式开始训练，完整的训练代码如下：
 
-<div class="language-python highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```python
 import os
 import random
 import numpy as np
@@ -1154,15 +942,7 @@ for epoch in range(epoch_num):
 print("Done!")
 ```
 
-</div>
-
-</div>
-
-<div class="language-plaintext highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```
 Using cuda device
 
 Epoch 1/3
@@ -1193,24 +973,12 @@ Macro-F1: 94.66 Micro-F1: 94.67
 Done!
 ```
 
-</div>
-
-</div>
-
 可以看到，随着训练的进行，模型在验证集上的 Macro-F1 和 Micro-F1 值先升后降。因此 3 轮 Epoch 结束后，会在目录下保存 2 个模型权重：
 
-<div class="language-plaintext highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```
 epoch_1_valid_macrof1_92.331_microf1_92.329_model_weights.bin
 epoch_2_valid_macrof1_94.999_microf1_95.000_model_weights.bin
 ```
-
-</div>
-
-</div>
 
 至此，我们对 Prompt 情感分析模型的训练就完成了。
 
@@ -1218,11 +986,7 @@ epoch_2_valid_macrof1_94.999_microf1_95.000_model_weights.bin
 
 训练完成后，我们加载在验证集上性能最优的模型权重，汇报其在测试集上的性能。
 
-<div class="language-python highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```python
 import json
 
 model.load_state_dict(torch.load('epoch_2_valid_macrof1_94.999_microf1_95.000_model_weights.bin'))
@@ -1258,15 +1022,7 @@ with torch.no_grad():
             f.write(json.dumps(example_result, ensure_ascii=False) + '\n')
 ```
 
-</div>
-
-</div>
-
-<div class="language-plaintext highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```
 evaluating on test set...
 100%|█████████████████████████████████| 300/300 [00:03<00:00, 89.36it/s]
 100%|█████████████████████████████████| 1200/1200 [00:00<00:00, 68281.48it/s]
@@ -1276,19 +1032,11 @@ Macro-F1: 95.75 Micro-F1: 95.75
 saving predicted results...
 ```
 
-</div>
-
-</div>
-
 可以看到，经过微调，模型在测试集上的 Macro-F1 值从 43.02 提升到 95.75，Micro-F1 值从 43.37 提升到 95.75，证明了我们对模型的微调是成功的。
 
 我们打开保存预测结果的 *test\_data\_pred.json*，其中每一行对应一个样本，`comment` 对应评论，`label` 对应标注标签，`pred` 对应预测出的标签，`prediction` 对应具体预测出的概率值。
 
-<div class="language-plaintext highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```
 {
     "comment": "这个宾馆比较陈旧了，特价的房间也很一般。总体来说一般", 
     "label": 1, 
@@ -1301,26 +1049,14 @@ saving predicted results...
 ...
 ```
 
-</div>
-
-</div>
-
 至此，我们使用 Transformers 库进行 Prompt 情感分析就全部完成了！
 
 > 当然，我们也可以通过设置 `vtype = 'virtual'` 使用虚拟 label words 来训练模型，最终在测试集上的性能为：
 >
-> <div class="language-plaintext highlighter-rouge">
->
-> <div class="highlight">
->
-> ``` highlight
+> ```
 > pos: 96.14 / 94.24 / 95.18, neg: 94.21 / 96.11 / 95.15
 > Macro-F1: 95.17 Micro-F1: 95.17
 > ```
->
-> </div>
->
-> </div>
 >
 > 可以看到，在该任务上，使用虚拟 label words 取得了与基础 verbalizer 类似的性能。
 
@@ -1328,11 +1064,7 @@ saving predicted results...
 
 我们训练模型的目的是为了能够给其他人提供服务。尤其对于不熟悉深度学习的普通开发者而言，需要的只是一个能够完成特定任务的接口。因此在大多数情况下，我们都应该将模型的预测过程封装为一个端到端 (End-to-End) 的函数：输入文本，输出结果：
 
-<div class="language-python highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```python
 def predict(model, tokenizer, comment, verbalizer):
     prompt_data = get_prompt(comment)
     prompt = prompt_data['prompt']
@@ -1362,17 +1094,9 @@ def predict(model, tokenizer, comment, verbalizer):
     return pred, prob
 ```
 
-</div>
-
-</div>
-
 下面我们尝试输出模型对测试集前 5 条数据的预测结果：
 
-<div class="language-python highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```python
 model.load_state_dict(torch.load('epoch_2_valid_macrof1_94.999_microf1_95.000_model_weights.bin'))
 
 for i in range(5):
@@ -1381,15 +1105,7 @@ for i in range(5):
     print(f"{data['comment']}\nlabel: {data['label']}\tpred: {pred}\tprob: {prob}")
 ```
 
-</div>
-
-</div>
-
-<div class="language-plaintext highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```
 这个宾馆比较陈旧了，特价的房间也很一般。总体来说一般
 label: 1        pred: 0 prob: 0.9692065715789795
 怀着十分激动的心情放映，可是看着看着发现，在放映完毕后，出现一集米老鼠的动画片！开始还怀疑是不是赠送的个别现象，可是后来发现每张DVD后面都有！真不知道生产商怎么想的，我想看的是猫和老鼠，不是米老鼠！如果厂家是想赠送的话，那就全套米老鼠和唐老鸭都赠送，只在每张DVD后面添加一集算什么？？简直是画蛇添足！！
@@ -1402,10 +1118,6 @@ label: 1        pred: 1 prob: 0.9942231774330139
 label: 1        pred: 1 prob: 0.9959742426872253
 ```
 
-</div>
-
-</div>
-
 可以看到，模型成功地输出了预测的类别和概率。
 
 ## 13.5 代码
@@ -1416,27 +1128,15 @@ label: 1        pred: 1 prob: 0.9959742426872253
 
 运行 *run\_prompt\_senti\_bert.sh* 脚本即可进行训练。
 
-<div class="language-bash highlighter-rouge">
-
-<div class="highlight">
-
-``` highlight
+```bash
 bash run_prompt_senti_bert.sh
 ```
-
-</div>
-
-</div>
 
 如果要进行测试或者将模型预测结果保存到文件，只需把脚本中的 `--do_train` 改成 `--do_test` 或 `--do_predict`。
 
 > 经过 3 轮训练，最终 BERT 模型在测试集上的结果为：
 >
-> <div class="language-plaintext highlighter-rouge">
->
-> <div class="highlight">
->
-> ``` highlight
+> ```
 > ==> Nvidia GeForce RTX 3090, batch=4, vtype=base
 > POS: 96.48 / 94.74 / 95.60, NEG: 94.69 / 96.45 / 95.56
 > micro_F1 - 95.5835 macro_f1 - 95.5833
@@ -1446,10 +1146,6 @@ bash run_prompt_senti_bert.sh
 > micro_F1 - 95.4166 macro_f1 - 95.4167
 > ```
 >
-> </div>
->
-> </div>
-
 ## 参考
 
 [\[1\]](https://github.com/huggingface/transformers/issues/9960) Github 关于 resize MLMHead 的讨论

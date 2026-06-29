@@ -1,7 +1,7 @@
 ---
 module: "CV-深度学习笔记"
 title: "手写python大模型"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [LLM, Transformer, PyTorch]
 ---
 
 # 手写python大模型

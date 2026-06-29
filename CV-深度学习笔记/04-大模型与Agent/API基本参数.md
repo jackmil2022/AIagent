@@ -1,7 +1,7 @@
 ---
 module: "CV-深度学习笔记"
 title: "API基本参数"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [LLM, DeepSeek, API]
 ---
 
 # API基本参数

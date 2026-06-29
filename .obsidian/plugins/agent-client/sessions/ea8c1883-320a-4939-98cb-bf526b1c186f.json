@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "sessionId": "ea8c1883-320a-4939-98cb-bf526b1c186f",
+  "agentId": "claude-code-acp",
+  "messages": [
+    {
+      "id": "46bcd767-87db-444f-bc1c-3b7842dbd04e",
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "你好"
+        }
+      ],
+      "timestamp": "2026-06-29T02:29:49.362Z"
+    }
+  ],
+  "savedAt": "2026-06-29T02:32:49.506Z"
+}

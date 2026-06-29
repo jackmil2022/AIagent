@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CV-深度学习笔记/02-深度学习理论-李沐/数值稳定性、模型初始化、激活函数.md",
+                "file": "机器学习/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "数值稳定性、模型初始化、激活函数"
+              "title": "README"
             }
           }
         ]
@@ -41,7 +41,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -171,7 +171,7 @@
             "state": {
               "type": "agent-client-chat-view",
               "state": {
-                "initialAgentId": "claude-code-acp"
+                "initialAgentId": "codex-acp"
               },
               "icon": "bot-message-square",
               "title": "Agent client"
@@ -192,7 +192,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 449.5
+    "width": 510.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -208,53 +208,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "258e9eb40cf24a60",
+  "active": "b527c8e5f7966fe5",
   "lastOpenFiles": [
-    "CV-深度学习笔记/02-深度学习理论-李沐/双向循环神经网络.md",
-    "CV-深度学习笔记/02-深度学习理论-李沐/数值稳定性、模型初始化、激活函数.md",
-    "CV-深度学习笔记/02-深度学习理论-李沐/数据增广.md",
-    "CV-深度学习笔记/02-深度学习理论-李沐/数据操作、数据预处理.md",
-    "CV-深度学习笔记/02-深度学习理论-李沐/树叶分类竞赛技术总结.md",
-    "CV-深度学习笔记/02-深度学习理论-李沐/权重衰退.md",
-    "CV-深度学习笔记/02-深度学习理论-李沐/丢弃法.md",
-    "CV-深度学习笔记/02-深度学习理论-李沐/多层感知机.md",
-    "CV-深度学习笔记/02-深度学习理论-李沐/池化层.md",
-    "CV-深度学习笔记/02-深度学习理论-李沐/残差神经网络ResNet.md",
-    "CV-深度学习笔记/02-深度学习理论-李沐/编码器解码器架构.md",
-    "CV-深度学习笔记/02-深度学习理论-李沐/锚框.md",
-    "CV-深度学习笔记/02-深度学习理论-李沐/门控循环单元GRU.md",
-    "CV-深度学习笔记/02-深度学习理论-李沐/卷积层.md",
-    "CV-深度学习笔记/02-深度学习理论-李沐/矩阵计算.md",
-    "CV-深度学习笔记/02-深度学习理论-李沐/合并行连接的网络GoogLeNet.md",
-    "CV-深度学习笔记/02-深度学习理论-李沐/分布式训练.md",
-    "CV-深度学习笔记/02-深度学习理论-李沐/机器翻译数据集.md",
-    "CV-深度学习笔记/02-深度学习理论-李沐/多GPU训练实现.md",
-    "CV-深度学习笔记/01-PyTorch基础-土堆/利用GPU训练.md",
-    "CV-深度学习笔记/01-PyTorch基础-土堆/卷积层.md",
-    "CV-深度学习笔记/01-PyTorch基础-土堆/非线性激活.md",
-    "CV-深度学习笔记/01-PyTorch基础-土堆/搭建小实战和Sequential使用.md",
-    "CV-深度学习笔记/01-PyTorch基础-土堆/查看开源项目.md",
-    "CV-深度学习笔记/03-深度学习课程-吴恩达/课程1_第1周_作业题_numpy构建基本函数.md",
-    "CV-深度学习笔记/03-深度学习课程-吴恩达/课程1_第1周_深度学习概述.md",
-    "assets/q1q6u68rot.gif",
-    "assets/q1q2blbfn.gif",
-    "assets/q1q1pdeatw.gif",
-    "assets/%E4%B8%8B%E8%BD%BD.gif",
-    "assets/v2-4959201e816888c6648f2e78cccfd253_720w.gif",
-    "assets/20200825171851456.gif",
-    "assets/20200825170148125.gif",
-    "assets/20200825170643804.gif",
-    "assets/20200825171135738.gif",
-    "assets/20190305160149865.gif",
-    "assets",
-    "00-AIagent项目总览.base",
-    "AIagent项目总览.base",
-    "投流agent/05-知识库",
-    "投流agent/04-实战项目",
-    "投流agent/03-汽车Agent开发",
-    "投流agent/02-汽车优化师技能",
-    "投流agent/01-汽车投流入门",
-    "投流agent/07-学习路径与计划",
-    "投流agent/06-工具与资源"
+    "机器学习/GitHub机器学习教程资源.md",
+    "机器学习/机器学习中文导读-GitHub仓库.md",
+    "机器学习/GitHub教程原文/ML-For-Beginners/translations/ms/7-TimeSeries/2-ARIMA/assignment.md",
+    "机器学习/README.md",
+    "机器学习/GitHub教程原文/ML-For-Beginners/README.md",
+    "机器学习/机器学习零基础中文速学.md",
+    "机器学习/GitHub教程原文/README.md",
+    "机器学习/GitHub教程原文/ML-For-Beginners/1-Introduction/1-intro-to-ML/README.md",
+    "机器学习/GitHub教程原文/ML-For-Beginners/1-Introduction/1-intro-to-ML/lesson-1.pdf",
+    "机器学习/GitHub教程原文/ML-For-Beginners/1-Introduction/1-intro-to-ML/assignment.md",
+    "机器学习/GitHub教程原文/tutorials-scikit-learn/img/bv.png",
+    "机器学习/GitHub教程原文/d2l-zh/chapter_appendix-tools-for-deep-learning/aws.md",
+    "机器学习/机器学习从零到高手学习路径.md",
+    "机器学习/GitHub教程原文/tutorials/unstable_source/vmap_recipe.py",
+    "机器学习/GitHub教程原文/tutorials/unstable_source/tracing_based_selective_build.rst",
+    "机器学习/GitHub教程原文/tutorials/unstable_source/python_extension_autoload.rst",
+    "机器学习/GitHub教程原文/tutorials/unstable_source/openvino_quantizer.rst",
+    "机器学习/GitHub教程原文/tutorials/unstable_source/nnapi_mobilenetv2.rst",
+    "机器学习/GitHub教程原文/tutorials/unstable_source/nestedtensor.py",
+    "机器学习/GitHub教程原文/tutorials/unstable_source/max_autotune_on_CPU_tutorial.rst",
+    "机器学习/GitHub教程原文/tutorials/unstable_source/maskedtensor_sparsity.py",
+    "机器学习/GitHub教程原文/tutorials/unstable_source/maskedtensor_overview.py",
+    "机器学习/GitHub教程原文/tutorials/unstable_source/README.md",
+    "机器学习/GitHub教程原文/tutorials/tutorial_submission_policy.md",
+    "机器学习/GitHub教程原文/tutorials/docathon-leaderboard.md",
+    "机器学习/GitHub教程原文/tutorials/_static/img/thumbnails/cropped/zeroing-out-gradients.PNG",
+    "机器学习/GitHub教程原文/tutorials/_static/img/thumbnails/cropped/what-is-a-state-dict.PNG",
+    "机器学习/GitHub教程原文/tutorials/_static/img/thumbnails/cropped/warmstarting-models.PNG",
+    "机器学习/GitHub教程原文/tutorials/_static/img/thumbnails/cropped/visualizing_gradients_tutorial.png",
+    "机器学习/GitHub教程原文/tutorials/_static/img/thumbnails/cropped/visualizing-with-tensorboard.png",
+    "机器学习/GitHub教程原文/tutorials/_static/img/thumbnails/cropped/using-flask-create-restful-api.png",
+    "机器学习/GitHub教程原文/tutorials/_static/img/thumbnails/cropped/understanding_leaf_vs_nonleaf.png",
+    "机器学习/GitHub教程原文/tutorials/_static/img/thumbnails/cropped/torchscript_overview.png",
+    "机器学习/GitHub教程原文/tutorials/_static/img/thumbnails/cropped/torchaudio-speech.png",
+    "机器学习/GitHub教程原文/tutorials/README.md",
+    "机器学习/GitHub教程原文/tutorials/CONTRIBUTING.md",
+    "机器学习/GitHub教程原文/tutorials/CODE_OF_CONDUCT.md",
+    "机器学习/GitHub教程原文/tutorials/CLAUDE.md",
+    "机器学习/GitHub教程原文/start-machine-learning/README.md",
+    "机器学习/GitHub教程原文/handson-ml3/ml-project-checklist.md",
+    "机器学习/GitHub教程原文/handson-ml3/docker/README.md",
+    "机器学习/GitHub教程原文/handson-ml3/README.md",
+    "机器学习/GitHub教程原文/handson-ml3/INSTALL.md",
+    "机器学习/GitHub教程原文/handson-ml3/CHANGES.md",
+    "机器学习/GitHub教程原文/nn-zero-to-hero/README.md",
+    "机器学习/GitHub教程原文/d2l-zh/index.md"
   ]
 }

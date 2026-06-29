@@ -1,7 +1,7 @@
 ---
 module: "CV-深度学习笔记"
 title: "基于向量的语义检索RAG"
-tags: [CV, Deep-Learning, PyTorch]
+tags: [RAG, 向量数据库, 语义检索]
 ---
 
 # 基于向量的语义检索RAG

@@ -18,6 +18,7 @@ updated: 2026-06-25
 
 ```
 AIagent/
+├── 机器学习/               ← 机器学习零基础入口（独立模块）
 ├── CV-深度学习笔记/        ← 系统性深度学习笔记（土堆+李沐+吴恩达+大模型）
 ├── hello-agents/           ← Datawhale 大模型学习完全指南（零基础→Agent前沿）
 ├── Transformers快速入门/   ← HuggingFace Transformers 中文教程
@@ -27,7 +28,22 @@ AIagent/
 
 ---
 
-## 🗺️ 四大学习模块
+## 🗺️ 五大学习模块
+
+### 模块零：机器学习
+
+> 📖 独立机器学习入门模块：从零基础概念、数学直觉、Python 数据处理到监督学习项目。
+
+| 部分 | 内容 | 入口 |
+|------|------|------|
+| 中文速学 | 面向零基础的中文机器学习核心概念教程 | [[机器学习/机器学习零基础中文速学\|→ 速学]] |
+| 完整路径 | 从零基础到进阶：Python、经典 ML、项目、深度学习、工程化、前沿方向 | [[机器学习/机器学习从零到高手学习路径\|→ 路径]] |
+| 中文导读 | 给英文 GitHub 仓库配中文学习顺序和概念翻译 | [[机器学习/机器学习中文导读-GitHub仓库\|→ 导读]] |
+| 零基础入门 | 样本/特征/标签、回归/分类、训练评估、学习路线 | [[机器学习/机器学习零基础入门\|→ 入门]] |
+| 学习路线 | Python、经典 ML、无监督学习、项目实战、神经网络衔接 | [[机器学习/机器学习学习路线\|→ 路线]] |
+| GitHub 教程 | GitHub 上适合学习的 ML 教程仓库与使用建议 | [[机器学习/GitHub机器学习教程资源\|→ 资源]] |
+| GitHub 原文 | 已克隆到本地的完整 GitHub 教程仓库 | [[机器学习/GitHub教程原文/README\|→ 原文]] |
+| 学习索引 | 机器学习到神经网络章节的衔接路径 | [[机器学习/README\|→ 索引]] |
 
 ### 模块一：CV-深度学习笔记
 
@@ -99,7 +115,7 @@ AIagent/
 - 数学基础 → [[hello-agents/01-智能体与LLM基础/02a-数学基础-线性代数\|线性代数]] / [[hello-agents/01-智能体与LLM基础/02b-数学基础-概率论与统计\|概率统计]] / [[hello-agents/01-智能体与LLM基础/02c-数学基础-微积分与优化\|微积分]]
 
 ### 阶段二：机器学习 + 深度学习
-- 机器学习 → [[hello-agents/01-智能体与LLM基础/03a-机器学习-基本概念\|基本概念]]
+- 机器学习 → [[机器学习/机器学习零基础入门\|零基础入门]] → [[hello-agents/01-智能体与LLM基础/03a-机器学习-基本概念\|基本概念]]
 - 深度学习 → [[hello-agents/01-智能体与LLM基础/04a-深度学习-神经网络基础\|神经网络]] / [[CV-深度学习笔记/02-深度学习理论-李沐/深度学习介绍\|李沐DL]]
 - PyTorch → [[hello-agents/06-PyTorch教程/01-PyTorch基础-Tensor张量\|Tensor]] → [[hello-agents/06-PyTorch教程/07-PyTorch完整训练流程\|完整训练]]
 
@@ -159,6 +175,10 @@ AIagent/
 
 | 资源 | 链接 |
 |------|------|
+| Microsoft ML-For-Beginners | [GitHub](https://github.com/microsoft/ML-For-Beginners) |
+| Zero to Mastery Machine Learning | [GitHub](https://github.com/mrdbourke/zero-to-mastery-ml) |
+| Hands-On Machine Learning notebooks | [GitHub](https://github.com/ageron/handson-ml3) |
+| Kaggle Learn Intro to ML | [kaggle.com/learn](https://www.kaggle.com/learn/intro-to-machine-learning) |
 | CV-深度学习笔记 GitHub | [AccumulateMore/CV](https://github.com/AccumulateMore/CV) |
 | Hello-Agents 在线阅读 | [datawhalechina.github.io/hello-agents](https://datawhalechina.github.io/hello-agents/) |
 | Transformers 中文教程 | [transformers.run](https://transformers.run/) |

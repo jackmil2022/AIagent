@@ -1,6 +1,11 @@
-# 01a Python基础：变量与数据类型
+---
+aliases:
+  - "01a-Python基础-变量与数据类型"
+title: "Python基础：变量与数据类型"
 module: "hello-agents"
-
+tags: ['Python', 'Programming', 'Basics']
+---
+# 01a Python基础：变量与数据类型
 > 这是为零基础读者准备的Python入门教程。如果你从未写过代码，也不用担心——我们会从最基础的概念开始，用生活中的例子来理解编程。
 
 ---

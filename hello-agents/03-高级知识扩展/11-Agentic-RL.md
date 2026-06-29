@@ -1,3 +1,9 @@
+---
+aliases:
+  - "11-Agentic-RL"
+title: "Agentic-RL"
+tags: ['AI', 'Agents', 'Reinforcement-Learning', 'RLHF', 'GRPO']
+---
 # 第十一章 Agentic-RL
 
 ## 11.1 从 LLM 训练到 Agentic RL
