@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "a7d27dcf540f57b1",
+        "id": "f9aec9ba9142fe96",
         "type": "tabs",
         "children": [
           {
-            "id": "258e9eb40cf24a60",
+            "id": "83fa0a48a4a7d534",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "机器学习/README.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "README"
+              "title": "新标签页"
             }
           }
         ]
@@ -94,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "投流agent/05-知识库/汽车投流研究报告.md",
+                "file": "01-基础准备/源文件/GitHub原文/基础准备GitHub原文索引.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +100,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "汽车投流研究报告 的反向链接列表"
+              "title": "基础准备GitHub原文索引 的反向链接列表"
             }
           },
           {
@@ -156,25 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "投流agent/05-知识库/汽车投流研究报告.md",
+                "file": "01-基础准备/源文件/GitHub原文/基础准备GitHub原文索引.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "汽车投流研究报告 的大纲"
-            }
-          },
-          {
-            "id": "57b9c8a5f69404fa",
-            "type": "leaf",
-            "state": {
-              "type": "agent-client-chat-view",
-              "state": {
-                "initialAgentId": "codex-acp"
-              },
-              "icon": "bot-message-square",
-              "title": "Agent client"
+              "title": "基础准备GitHub原文索引 的大纲"
             }
           },
           {
@@ -186,9 +170,31 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "53afbab7f3fc7b03",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "01-基础准备/源文件/GitHub原文/基础准备GitHub原文索引.md"
+              },
+              "icon": "lucide-info",
+              "title": "基础准备GitHub原文索引的笔记属性"
+            }
+          },
+          {
+            "id": "0ec14417db362b72",
+            "type": "leaf",
+            "state": {
+              "type": "agent-client-chat-view",
+              "state": {},
+              "icon": "bot-message-square",
+              "title": "New session"
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -210,51 +216,52 @@
   },
   "active": "b527c8e5f7966fe5",
   "lastOpenFiles": [
-    "机器学习/GitHub机器学习教程资源.md",
-    "机器学习/机器学习中文导读-GitHub仓库.md",
-    "机器学习/GitHub教程原文/ML-For-Beginners/translations/ms/7-TimeSeries/2-ARIMA/assignment.md",
-    "机器学习/README.md",
-    "机器学习/GitHub教程原文/ML-For-Beginners/README.md",
-    "机器学习/机器学习零基础中文速学.md",
-    "机器学习/GitHub教程原文/README.md",
-    "机器学习/GitHub教程原文/ML-For-Beginners/1-Introduction/1-intro-to-ML/README.md",
-    "机器学习/GitHub教程原文/ML-For-Beginners/1-Introduction/1-intro-to-ML/lesson-1.pdf",
-    "机器学习/GitHub教程原文/ML-For-Beginners/1-Introduction/1-intro-to-ML/assignment.md",
-    "机器学习/GitHub教程原文/tutorials-scikit-learn/img/bv.png",
-    "机器学习/GitHub教程原文/d2l-zh/chapter_appendix-tools-for-deep-learning/aws.md",
-    "机器学习/机器学习从零到高手学习路径.md",
-    "机器学习/GitHub教程原文/tutorials/unstable_source/vmap_recipe.py",
-    "机器学习/GitHub教程原文/tutorials/unstable_source/tracing_based_selective_build.rst",
-    "机器学习/GitHub教程原文/tutorials/unstable_source/python_extension_autoload.rst",
-    "机器学习/GitHub教程原文/tutorials/unstable_source/openvino_quantizer.rst",
-    "机器学习/GitHub教程原文/tutorials/unstable_source/nnapi_mobilenetv2.rst",
-    "机器学习/GitHub教程原文/tutorials/unstable_source/nestedtensor.py",
-    "机器学习/GitHub教程原文/tutorials/unstable_source/max_autotune_on_CPU_tutorial.rst",
-    "机器学习/GitHub教程原文/tutorials/unstable_source/maskedtensor_sparsity.py",
-    "机器学习/GitHub教程原文/tutorials/unstable_source/maskedtensor_overview.py",
-    "机器学习/GitHub教程原文/tutorials/unstable_source/README.md",
-    "机器学习/GitHub教程原文/tutorials/tutorial_submission_policy.md",
-    "机器学习/GitHub教程原文/tutorials/docathon-leaderboard.md",
-    "机器学习/GitHub教程原文/tutorials/_static/img/thumbnails/cropped/zeroing-out-gradients.PNG",
-    "机器学习/GitHub教程原文/tutorials/_static/img/thumbnails/cropped/what-is-a-state-dict.PNG",
-    "机器学习/GitHub教程原文/tutorials/_static/img/thumbnails/cropped/warmstarting-models.PNG",
-    "机器学习/GitHub教程原文/tutorials/_static/img/thumbnails/cropped/visualizing_gradients_tutorial.png",
-    "机器学习/GitHub教程原文/tutorials/_static/img/thumbnails/cropped/visualizing-with-tensorboard.png",
-    "机器学习/GitHub教程原文/tutorials/_static/img/thumbnails/cropped/using-flask-create-restful-api.png",
-    "机器学习/GitHub教程原文/tutorials/_static/img/thumbnails/cropped/understanding_leaf_vs_nonleaf.png",
-    "机器学习/GitHub教程原文/tutorials/_static/img/thumbnails/cropped/torchscript_overview.png",
-    "机器学习/GitHub教程原文/tutorials/_static/img/thumbnails/cropped/torchaudio-speech.png",
-    "机器学习/GitHub教程原文/tutorials/README.md",
-    "机器学习/GitHub教程原文/tutorials/CONTRIBUTING.md",
-    "机器学习/GitHub教程原文/tutorials/CODE_OF_CONDUCT.md",
-    "机器学习/GitHub教程原文/tutorials/CLAUDE.md",
-    "机器学习/GitHub教程原文/start-machine-learning/README.md",
-    "机器学习/GitHub教程原文/handson-ml3/ml-project-checklist.md",
-    "机器学习/GitHub教程原文/handson-ml3/docker/README.md",
-    "机器学习/GitHub教程原文/handson-ml3/README.md",
-    "机器学习/GitHub教程原文/handson-ml3/INSTALL.md",
-    "机器学习/GitHub教程原文/handson-ml3/CHANGES.md",
-    "机器学习/GitHub教程原文/nn-zero-to-hero/README.md",
-    "机器学习/GitHub教程原文/d2l-zh/index.md"
+    "06-行业应用/01-投流Agent/02-平台教程/投流agent教程合集.md",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap2_linear_regression/线性回归历史说明.md",
+    "01-基础准备/中文学习版/Python与数据处理零基础中文课.md",
+    "01-基础准备/中文学习版/基础准备中文教材索引.md",
+    "01-基础准备/基础准备学习索引.md",
+    "01-基础准备/基础准备零基础中文速学.md",
+    "01-基础准备/中文学习版/数据挖掘项目中文入门.md",
+    "01-基础准备/中文学习版/机器学习数学中文预备课.md",
+    "未命名.canvas",
+    "90-资料库/01-GitHub原文/机器学习/ML-For-Beginners/6-NLP/2-Tasks/assignment.md",
+    "00-仓库整理方案-PARA治理版.md",
+    "00-全仓库架构说明.md",
+    "99-归档/00-归档索引.md",
+    "90-资料库/02-课程原始资料/00-课程原始资料索引.md",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap6_RNN/题目要求",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap6_RNN/tangshi.txt",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap6_RNN/poems.txt",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap6_RNN/poem_generation_pytorch.ipynb",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap6_RNN/poem_generation_pytorch.md",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap6_RNN/poem_generation_pytorch-ans.md",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap6_RNN/poem_generation_pytorch-ans.ipynb",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap6_RNN/RNN历史说明.md",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap6_RNN",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap5_CNN/CNN_pytorch.ipynb",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap5_CNN/CNN历史说明.md",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap5_CNN/CNN_pytorch-ans.md",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap5_CNN/CNN_pytorch.md",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap5_CNN/CNN_pytorch-ans.ipynb",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap5_CNN",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap3_SVM/data/train_multi.txt",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap3_SVM/SVM历史说明.md",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap12_RBM/RBM历史说明.md",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap3_softmax_regression/Softmax回归历史说明.md",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap2_linear_regression/linear_regression-ans.md",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap2_linear_regression/exercise-linear_regression.md",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap11_gaussian_mixture/高斯混合模型历史说明.md",
+    "99-归档/03-深度学习/01-神经网络与深度学习/legacy/chap4_ simple neural network/简单神经网络历史说明.md",
+    "02-机器学习/源文件/GitHub原文/tutorials/_static/img/thumbnails/cropped/zeroing-out-gradients.PNG",
+    "02-机器学习/源文件/GitHub原文/tutorials/_static/img/thumbnails/cropped/what-is-a-state-dict.PNG",
+    "02-机器学习/源文件/GitHub原文/tutorials/_static/img/thumbnails/cropped/warmstarting-models.PNG",
+    "02-机器学习/源文件/GitHub原文/tutorials/_static/img/thumbnails/cropped/visualizing_gradients_tutorial.png",
+    "02-机器学习/源文件/GitHub原文/tutorials/_static/img/thumbnails/cropped/visualizing-with-tensorboard.png",
+    "02-机器学习/源文件/GitHub原文/tutorials/_static/img/thumbnails/cropped/using-flask-create-restful-api.png",
+    "02-机器学习/源文件/GitHub原文/tutorials/_static/img/thumbnails/cropped/understanding_leaf_vs_nonleaf.png",
+    "02-机器学习/源文件/GitHub原文/tutorials/_static/img/thumbnails/cropped/torchscript_overview.png",
+    "02-机器学习/源文件/GitHub原文/tutorials/_static/img/thumbnails/cropped/torchaudio-speech.png",
+    "02-机器学习/源文件/GitHub原文/tutorials/_static/img/thumbnails/cropped/torchaudio-asr.png"
   ]
 }

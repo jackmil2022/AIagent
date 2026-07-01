@@ -1,103 +1,92 @@
 filters:
   and:
     - file.ext == "md"
-    - 'file.name != "00-AIagent项目总索引"'
+    - file.name != "00-AIagent项目总索引"
     - not:
         - file.hasTag("excalidraw")
-
 formulas:
-  topic_summary: 'if(tags, tags.join(", "), "")'
-  days_old: '(now() - file.ctime).days'
-  link_count: 'file.links.length'
-  backlink_count: 'file.backlinks.length'
-
+  topic_summary: if(tags, tags.join(", "), "")
+  days_old: (now() - file.ctime).days
+  link_count: file.links.length
+  backlink_count: file.backlinks.length
 properties:
   module:
-    displayName: "模块"
+    displayName: 模块
   file.folder:
-    displayName: "目录"
+    displayName: 目录
   tags:
-    displayName: "标签"
+    displayName: 标签
   file.mtime:
-    displayName: "修改时间"
+    displayName: 修改时间
   formula.link_count:
-    displayName: "链接数"
+    displayName: 链接数
   formula.backlink_count:
-    displayName: "被引用"
-
+    displayName: 被引用
 views:
-  # ===== 全部笔记总览 =====
   - type: table
-    name: "📋 全部笔记"
+    name: 📋 全部笔记
+    groupBy:
+      property: module
+      direction: ASC
     order:
       - module
       - file.name
       - file.folder
       - tags
       - file.mtime
-    groupBy:
-      property: module
-      direction: ASC
-
-  # ===== 按模块浏览 =====
   - type: table
-    name: "🧩 CV-深度学习笔记"
+    name: 🧩 CV-深度学习笔记
     filters:
       and:
-        - 'module == "CV-深度学习笔记"'
+        - module == "CV-深度学习笔记"
+    groupBy:
+      property: file.folder
+      direction: ASC
     order:
       - file.name
       - file.folder
       - tags
       - file.mtime
+  - type: table
+    name: 🤖 Hello-Agents
+    filters:
+      and:
+        - module == "hello-agents"
     groupBy:
       property: file.folder
       direction: ASC
-
-  - type: table
-    name: "🤖 Hello-Agents"
-    filters:
-      and:
-        - 'module == "hello-agents"'
     order:
       - file.name
       - file.folder
       - tags
       - file.mtime
-    groupBy:
-      property: file.folder
-      direction: ASC
-
   - type: table
-    name: "🔤 Transformers"
+    name: 🔤 Transformers
     filters:
       and:
-        - 'module == "Transformers快速入门"'
+        - module == "Transformers快速入门"
     order:
       - file.name
       - tags
       - file.mtime
-
   - type: table
-    name: "🚗 投流Agent"
+    name: 🚗 投流Agent
     filters:
       and:
-        - 'module == "投流agent"'
+        - module == "投流agent"
+    groupBy:
+      property: file.folder
+      direction: ASC
     order:
       - file.name
       - file.folder
       - tags
       - file.mtime
-    groupBy:
-      property: file.folder
-      direction: ASC
-
-  # ===== 高引用笔记（核心节点）=====
   - type: table
-    name: "⭐ 核心节点（高被引用）"
+    name: ⭐ 核心节点（高被引用）
     filters:
       and:
-        - 'formula.backlink_count >= 3'
+        - formula.backlink_count >= 3
     order:
       - file.name
       - module

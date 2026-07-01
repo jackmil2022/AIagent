@@ -2,7 +2,7 @@
   "claude": {
     "id": "claude-code-acp",
     "displayName": "Claude Code",
-    "apiKey": "",
+    "apiKeySecretId": "",
     "command": "claude-agent-acp",
     "args": [],
     "env": [
@@ -27,7 +27,7 @@
   "codex": {
     "id": "codex-acp",
     "displayName": "Codex",
-    "apiKey": "",
+    "apiKeySecretId": "",
     "command": "codex-acp",
     "args": [],
     "env": [
@@ -44,7 +44,7 @@
   "gemini": {
     "id": "gemini-cli",
     "displayName": "Gemini CLI",
-    "apiKey": "",
+    "apiKeySecretId": "",
     "command": "gemini",
     "args": [
       "--experimental-acp"
@@ -56,6 +56,12 @@
   "autoAllowPermissions": false,
   "autoMentionActiveNote": true,
   "enableSystemNotifications": true,
+  "promptInjection": {
+    "enabled": true,
+    "latex": true,
+    "wikiLinks": true,
+    "tables": true
+  },
   "debugMode": false,
   "nodePath": "",
   "exportSettings": {
@@ -81,6 +87,14 @@
     "fontSize": null
   },
   "savedSessions": [
+    {
+      "sessionId": "019f1738-d9c3-7c13-924d-b42c9c26ab35",
+      "agentId": "codex-acp",
+      "cwd": "/Users/yin/PycharmProjects/AIagent",
+      "title": "/$PARA Skill Governance 帮我整理一下这个仓库",
+      "createdAt": "2026-06-30T06:33:13.021Z",
+      "updatedAt": "2026-06-30T07:19:13.221Z"
+    },
     {
       "sessionId": "019f1174-9aaa-7da3-acc0-12950dbad1c2",
       "agentId": "codex-acp",
@@ -171,12 +185,14 @@
     }
   ],
   "lastUsedModels": {
-    "claude-code-acp": "default"
+    "claude-code-acp": "default",
+    "codex-acp": "gpt-5.4"
   },
   "lastUsedModes": {
     "codex-acp": "agent-full-access",
     "claude-code-acp": "auto"
   },
+  "lastUsedConfigOptions": {},
   "enableFloatingChat": false,
   "floatingButtonImage": "",
   "floatingWindowSize": {
